@@ -1,0 +1,56 @@
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 3rem;
+  border-radius: 10px;
+  background-color: var(--color-text-accent);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.text h4 {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: var(--color-bg);
+}
+
+.text p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 2rem;
+  letter-spacing: 0.02rem;
+  color: var(--color-bg);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.buttonContainer button {
+  padding: 0.5rem 1rem;
+  color: var(--color-bg);
+  background: transparent;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-bg);
+  outline: none;
+  cursor: pointer;
+  margin: 0 2rem;
+  min-width: 9rem;
+  min-height: 3.2rem;
+}

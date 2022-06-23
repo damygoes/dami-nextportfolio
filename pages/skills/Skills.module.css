@@ -1,0 +1,124 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 4rem;
+  padding: 3rem;
+}
+/* .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+} */
+/* .title h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: var(--color-text);
+} */
+.title p {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contentCard h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cardGroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.cardGroup div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--color-bg);
+  width: 12rem;
+  height: 10rem;
+}
+
+.cardGroup div p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+  .dami_skills-content_card h4 {
+    text-align: center;
+  }
+}
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+  .dami__skills-title p {
+    font-size: 1rem;
+  }
+
+  .dami__skills-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .dami_skills-content_card-group {
+    gap: 1rem;
+  }
+
+  .dami_skills-content_card-group div {
+    border: 1px solid var(--color-text-accent);
+  }
+
+  .dami_skills-content_card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+  .dami__skills-title h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .dami__skills-title p {
+    font-size: 1rem;
+  }
+}

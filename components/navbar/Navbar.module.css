@@ -1,0 +1,220 @@
+.header {
+  width: 100%;
+  height: 5rem;
+  /* padding: 0 2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  width: 100vw;
+  height: 10vh;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--color-bg);
+  position: fixed;
+  z-index: 999;
+}
+
+/* Logo Container */
+.logo {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.logo Image {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.header nav ul li {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttonContainer button {
+  padding: 0.5rem 1rem;
+  color: var(--color-button);
+  background: transparent;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-button);
+  outline: none;
+  cursor: pointer;
+  margin: 0 2rem;
+  min-width: 8.2rem;
+  min-height: 3.2rem;
+}
+
+/* Mobile Menu (Hamburger Menu) */
+.mobileContainer {
+  display: none;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.mobileContainer svg {
+  cursor: pointer;
+  color: var(--color-button);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1.2rem;
+  width: 90vw;
+  height: 60vh;
+  border-radius: 5px;
+  background-color: var(--color-bg);
+  backdrop-filter: blur(150px);
+  border: 1px solid green;
+}
+.mobileLinks ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.mobileLinks li {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.mobileLinks .buttonContainer {
+  display: none;
+}
+/* you can create custom css animations using this tool - www.animista.net */
+/* Click on "Copy Class" from the website - animista.net and paste the code here first */
+.scaleUpCenter {
+  -webkit-animation: scaleUpCenter 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scaleUpCenter 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* Click on "Copy Keyframes" from the website - animista.net and paste the code here second */
+@-webkit-keyframes scaleUpCenter {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUpCenter {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* Media Queris */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+  .header nav {
+    display: none;
+  }
+
+  .mobileContainer {
+    display: block;
+  }
+
+  .mobileLinks {
+    top: 3rem;
+    margin-top: 1.2rem;
+    width: 80vw;
+    height: 100vh;
+  }
+
+  .mobileLinks .buttonContainer {
+    display: block;
+  }
+
+  .mobileLinks .buttonContainer button {
+    margin: 3rem 0;
+  }
+}
+/* Tablet Devices  - any size below 700px will be affected by this query */
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 2rem 4rem;
+  }
+  .mobileLinks {
+    top: 3rem;
+    margin-top: 1.2rem;
+    width: 80vw;
+    height: 70vh;
+  }
+}
+/* Mobile Devices  - any size below 550px will be affected by this query */
+@media screen and (max-width: 550px) {
+  .header {
+    padding: 2rem;
+  }
+  .buttonContainer {
+    display: none;
+  }
+  .mobileLinks {
+    top: 3rem;
+    margin-top: 1.2rem;
+    width: 88vw;
+    height: 100vh;
+  }
+
+  .mobileLinks .buttonContainer {
+    display: block;
+  }
+
+  .mobileLinks .buttonContainer button {
+    margin: 3rem 0;
+  }
+}
