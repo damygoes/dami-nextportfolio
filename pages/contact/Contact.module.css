@@ -72,10 +72,11 @@
 
 .half {
   width: 48%;
+  flex: 1;
 }
 
 .half:nth-child(2) {
-  margin-left: 1.8rem;
+  margin-left: 1rem;
   justify-self: left;
 }
 
@@ -173,7 +174,7 @@
   width: 100%;
   background: var(--color-text);
   border: 1px solid #e5e7eb;
-  margin: 12rem 0 0rem 0;
+  margin-top: 12rem;
 }
 
 .footer {
@@ -193,4 +194,122 @@
 .footer p span {
   font-style: italic;
   color: var(--color-subtext);
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+  .contact {
+    padding: 2rem;
+  }
+  .contactMain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left {
+    margin-right: 0rem;
+    width: 100%;
+    gap: 2rem;
+  }
+  .left p {
+    margin-bottom: 2rem;
+  }
+  .form {
+    margin-bottom: 6rem;
+  }
+  .half:nth-child(2) {
+    margin-left: 1rem;
+  }
+  .right {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0rem;
+  }
+  .right .imageContainer {
+    display: none;
+  }
+  .socials {
+    justify-content: center;
+    margin-top: 0rem;
+  }
+  .iconContainer {
+    margin: 0 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  .divider {
+    margin-top: 8rem;
+  }
+}
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+  .contact {
+    padding: 2rem;
+  }
+  .contactMain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .head {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .head h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .head div {
+    width: 8rem;
+    margin-left: 0rem;
+  }
+
+  .left p {
+    margin-bottom: 2rem;
+    text-align: justify;
+    padding-right: 0rem;
+  }
+  .form {
+    margin-bottom: 6rem;
+  }
+  .half {
+    width: 100%;
+    flex: none;
+  }
+  .half:nth-child(2) {
+    margin-left: 0rem;
+  }
+  .buttonContainer button {
+    font-size: 1.2rem;
+    min-width: 7rem;
+  }
+  .divider {
+    margin-top: 6rem;
+  }
+}
+
+/* Tablet Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+  .head h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .buttonContainer button {
+    font-size: 1.2rem;
+    min-width: 7rem;
+  }
+  .socials {
+    justify-content: space-evenly;
+  }
+  .iconContainer {
+    margin: 0rem;
+  }
+  .divider {
+    margin-top: 6rem;
+  }
 }
