@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   margin-top: 2rem;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 10px;
   background-color: var(--color-text-accent);
 }
@@ -22,7 +22,7 @@
   font-size: 2.5rem;
   line-height: 2rem;
   font-weight: 400;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   color: var(--color-bg);
 }
 
@@ -30,7 +30,6 @@
   font-size: 1.2rem;
   font-weight: 100;
   line-height: 2rem;
-  letter-spacing: 0.02rem;
   color: var(--color-bg);
 }
 
@@ -53,4 +52,85 @@
   margin: 0 2rem;
   min-width: 9rem;
   min-height: 3.2rem;
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+  .cta {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+  .text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .text h4 {
+    font-size: 2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+}
+
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+  .cta {
+    flex-direction: column;
+    margin-top: 0.5rem;
+    padding: 2rem;
+  }
+  .text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .text h4 {
+    font-size: 1.8rem;
+    letter-spacing: normal;
+  }
+
+  .text p {
+    font-size: 1rem;
+    margin-top: 0rem;
+    letter-spacing: normal;
+  }
+}
+
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+  .cta {
+    flex-direction: column;
+    margin-top: 0.2rem;
+    padding: 2rem;
+  }
+  .text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .text h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: normal;
+  }
+
+  .text p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    letter-spacing: normal;
+  }
 }

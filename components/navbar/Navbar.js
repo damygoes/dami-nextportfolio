@@ -47,16 +47,32 @@ const Navbar = () => {
           <div className={styles.mobileLinks + " " + styles.scaleUpCenter}>
             <div>
               <ul>
-                <li>
+                <li
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
                   <Link href="/skills"> Skills </Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
                   <Link href="/projects"> Projects </Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
                   <Link href="/blog"> Blog </Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
                   <Link href="/contact"> Contact </Link>
                 </li>
               </ul>

@@ -5,7 +5,7 @@ const Cta = () => {
     <div className={styles.cta}>
       <div className={styles.text}>
         <h4>Let's work together</h4>
-        <p> I am available for fulltime or freelance. </p>
+        <p> I am available for fulltime or freelance work. </p>
       </div>
       <div className={styles.buttonContainer}>
         <button type="button">Hire Me</button>

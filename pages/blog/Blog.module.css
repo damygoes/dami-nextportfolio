@@ -1,0 +1,66 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 6rem;
+  /* padding: 4rem 6rem; */
+}
+
+.bloghead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.bloghead h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.bloghead div {
+  width: 12rem;
+  height: 0;
+  margin-left: 2rem;
+  background-color: var(--color-subtext);
+  border: 1px solid var(--color-button);
+}
+
+.blogbody {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+}
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+}
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+  .bloghead {
+    flex-direction: column;
+  }
+
+  .bloghead h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .bloghead div {
+    width: 8rem;
+    margin-left: 0;
+  }
+}
