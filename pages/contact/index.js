@@ -71,48 +71,38 @@ const Contact = () => {
             </div>
             <div className={styles.socials}>
               <div className={styles.iconContainer}>
-                <Link
-                  href="mailto:badadamilola@gmx.de"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={Email} />
+                <Link href="mailto:badadamilola@gmx.de">
+                  <a target="_blank" rel="noreferrer">
+                    <Image src={Email} />
+                  </a>
                 </Link>
               </div>
               <div className={styles.iconContainer}>
-                <Link
-                  href="https://www.linkedin.com/in/damilolabada/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={LinkedIn} />
+                <Link href="https://www.linkedin.com/in/damilolabada/">
+                  <a target="_blank" rel="noreferrer">
+                    <Image src={LinkedIn} />
+                  </a>
                 </Link>
               </div>
               <div className={styles.iconContainer}>
-                <Link
-                  href="https://github.com/damygoes"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={Github} />
+                <Link href="https://github.com/damygoes">
+                  <a target="_blank" rel="noreferrer">
+                    <Image src={Github} />
+                  </a>
                 </Link>
               </div>
               <div className={styles.iconContainer}>
-                <Link
-                  href="https://twitter.com/damygoes"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={Twitter} />
+                <Link href="https://twitter.com/damygoes">
+                  <a target="_blank" rel="noreferrer">
+                    <Image src={Twitter} />
+                  </a>
                 </Link>
               </div>
               <div className={styles.iconContainer}>
-                <Link
-                  href="https://www.instagram.com/damy.goes/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={Instagram} />
+                <Link href="https://www.instagram.com/damy.goes/">
+                  <a target="_blank" rel="noreferrer">
+                    <Image src={Instagram} />
+                  </a>
                 </Link>
               </div>
             </div>
