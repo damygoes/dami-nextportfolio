@@ -14,18 +14,18 @@ const ProjectDetail = ({ project }) => {
       <div className={styles.left}>
         <div
           onClick={() => {
-            router.back();
+            router.push("/projects");
           }}
         >
           {" "}
           <HiOutlineArrowLeft
             onClick={() => {
-              router.back();
+              router.push("/projects");
             }}
           />{" "}
           <p
             onClick={() => {
-              router.back();
+              router.push("/projects");
             }}
           >
             Back to projects
