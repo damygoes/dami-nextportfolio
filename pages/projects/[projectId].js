@@ -1,57 +1,130 @@
+import { MongoClient, ObjectId } from "mongodb";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
+
+import { HiOutlineArrowLeft } from "react-icons/hi";
+
+import styles from "./Project.module.css";
+
 const ProjectDetail = ({ project }) => {
+  const router = useRouter();
   return (
-    <>
-      <h1> {project.title} </h1>
-      <p> {project.description} </p>
-      {/* <h1>Project Title</h1>
-      <p> Project Detail</p> */}
-    </>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <div
+          onClick={() => {
+            router.back();
+          }}
+        >
+          {" "}
+          <HiOutlineArrowLeft
+            onClick={() => {
+              router.back();
+            }}
+          />{" "}
+          <p
+            onClick={() => {
+              router.back();
+            }}
+          >
+            Back to projects
+          </p>{" "}
+        </div>
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={500}
+          height={500}
+        />
+      </div>
+      <div className={styles.right}>
+        <div className={styles.head}>
+          <h3> {project.title} </h3>
+          <p> {project.detail} </p>
+        </div>
+        <div className={styles.tags}>
+          <p>
+            {" "}
+            Project: <span> {project.description}</span>{" "}
+          </p>
+          <p>
+            {" "}
+            Technologies: <span> {project.tech} </span>
+          </p>
+        </div>
+        <div className={styles.linksContainer}>
+          <Link href={project.deployed}>
+            <a target="_blank" rel="noreferrer">
+              {" "}
+              <button type="button">live demo</button>
+            </a>
+          </Link>
+          <Link href={project.github}>
+            <a target="_blank" rel="noreferrer">
+              {" "}
+              <button type="button">Github Repo</button>
+            </a>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 
 // We could use useRouter to fetch the project id from the url path and match it to the project id from the data on order to get details for a particular project using it's id. However, useRoute hook or generally react hooks cannot and does not work within the getStaticProps code block, therefore this is not an option. Instead, we use the "context" method which we can use to assess params for our url
 
 export async function getStaticProps(context) {
-  // send http request to fetch data for a single project
-
+  // fetch project id from url path
   const projectId = context.params.projectId;
+
+  // connecting to our MongoDB database to fetch data
+  const client = await MongoClient.connect(
+    "mongodb+srv://damygoes:s72XtMS8P2g6D8UI@cluster0.nf34c.mongodb.net/portfolioData?retryWrites=true&w=majority"
+  );
+
+  const db = client.db();
+  const projectsCollection = db.collection("projects");
+  const project = await projectsCollection.findOne({
+    _id: ObjectId(projectId),
+  });
+  client.close();
 
   return {
     props: {
       project: {
-        id: projectId,
-        title: "Driven",
-        description: "A modern e-commerce store",
-        image:
-          "https://images.unsplash.com/photo-1491947153227-33d59da6c448?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60",
-        isDone: true,
-        deployed: "https://www.google.com",
-        github: "https://github.com/damygoes",
-      }, //from dummy data
+        id: project._id.toString(),
+        title: project.title,
+        description: project.description,
+        image: project.image,
+        isDone: project.isDone,
+        deployed: project.deployed,
+        github: project.github,
+        slug: project.slug,
+        detail: project.detail,
+        tech: project.tech,
+      },
     },
   };
 }
 
 export async function getStaticPaths() {
+  // connecting to our MongoDB database to fetch data
+  const client = await MongoClient.connect(
+    "mongodb+srv://damygoes:s72XtMS8P2g6D8UI@cluster0.nf34c.mongodb.net/portfolioData?retryWrites=true&w=majority"
+  );
+  const db = client.db();
+  const portfolio = db.collection("projects");
+  const projects = await portfolio.find({}, { _id: 1 }).toArray();
+  client.close();
+
   return {
     fallback: false,
-    paths: [
-      {
-        params: {
-          projectId: "001",
-        },
+    paths: projects.map((project) => ({
+      params: {
+        projectId: project._id.toString(),
       },
-      {
-        params: {
-          projectId: "002",
-        },
-      },
-      {
-        params: {
-          projectId: "003",
-        },
-      },
-    ],
+    })),
   };
 }
 

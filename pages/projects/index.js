@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { MongoClient } from "mongodb";
 
 import ProjectCard from "../../components/projectcard/ProjectCard";
 
@@ -30,52 +30,27 @@ const Projects = ({ projects }) => {
 };
 
 export async function getStaticProps() {
-  // send http request to fetch data
+  // connecting to our MongoDB database to fetch data
+  const client = await MongoClient.connect(
+    "mongodb+srv://damygoes:s72XtMS8P2g6D8UI@cluster0.nf34c.mongodb.net/portfolioData?retryWrites=true&w=majority"
+  );
 
-  // DUMMY DATA
-  const projects = [
-    {
-      id: "001",
-      title: "Driven",
-      description: "A modern e-commerce store",
-      image: ProjectOne,
-      isDone: true,
-      deployed: "https://www.google.com",
-      github: "https://github.com/damygoes",
-    },
-    {
-      id: "002",
-      title: "SupPR",
-      description: "A cycling app",
-      image: ProjectFour,
-
-      isDone: true,
-      deployed: "https://www.google.com",
-      github: "https://github.com/damygoes",
-    },
-    {
-      id: "003",
-      title: "Activate",
-      description: "An activity app",
-      image: ProjectThree,
-      isDone: true,
-      deployed: "https://www.google.com",
-      github: "https://github.com/damygoes",
-    },
-    {
-      id: "004",
-      title: "NFT'ed",
-      description: "A NFT-based memory game",
-      image: ProjectTwo,
-      isDone: false,
-      deployed: "https://www.google.com",
-      github: "https://github.com/damygoes",
-    },
-  ];
+  const db = client.db();
+  const portfolio = db.collection("projects");
+  const projects = await portfolio.find({}).toArray();
+  client.close();
 
   return {
     props: {
-      projects: projects, //from dummy data
+      projects: projects.map((project) => ({
+        title: project.title,
+        description: project.description,
+        image: project.image,
+        isDone: project.isDone,
+        deployed: project.deployed,
+        github: project.github,
+        id: project._id.toString(),
+      })),
     },
   };
 }

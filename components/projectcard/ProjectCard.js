@@ -23,21 +23,28 @@ const ProjectCard = ({ projects }) => {
           <Link href={`projects/${project.id}`}>
             <div className={styles.projectCard} key={project.id}>
               <div className={styles.imageContainer}>
-                <Image src={project.image} alt={project.title} />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={300}
+                  height={300}
+                />
               </div>
               <div className={styles.projectContent}>
                 <h4> {project.title} </h4>
-                <p> {project.description} </p>
+                {/* <p> {project.description} </p> */}
                 <div className={styles.projectLinks}>
-                  <Link
-                    href={project.deployed}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <HiOutlineEye />
+                  <Link href={project.deployed}>
+                    <a target="_blank" rel="noreferrer">
+                      {" "}
+                      <HiOutlineEye />
+                    </a>
                   </Link>
-                  <Link href={project.github} target="_blank" rel="noreferrer">
-                    <GrGithub />
+                  <Link href={project.github}>
+                    <a target="_blank" rel="noreferrer">
+                      {" "}
+                      <GrGithub />
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -46,17 +53,28 @@ const ProjectCard = ({ projects }) => {
         ) : (
           <div className={styles.comingSoon} key={project.id}>
             <div className={styles.imageContainer}>
-              <Image src={project.image} alt={project.title} />
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={300}
+                height={300}
+              />
             </div>
             <div className={styles.projectContent}>
               <h4> {project.title} </h4>
-              <p> {project.description} </p>
+              {/* <p> {project.description} </p> */}
               <div className={styles.projectLinks}>
-                <Link href={project.deployed} target="_blank" rel="noreferrer">
-                  <HiOutlineEye />
+                <Link href={project.deployed}>
+                  <a target="_blank" rel="noreferrer">
+                    {" "}
+                    <HiOutlineEye />
+                  </a>
                 </Link>
-                <Link href={project.github} target="_blank" rel="noreferrer">
-                  <GrGithub />
+                <Link href={project.github}>
+                  <a target="_blank" rel="noreferrer">
+                    {" "}
+                    <GrGithub />
+                  </a>
                 </Link>
               </div>
             </div>

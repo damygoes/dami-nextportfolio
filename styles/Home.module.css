@@ -236,10 +236,6 @@
 
 /* Tablet Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
-  /* .header {
-    gap: 3rem;
-  } */
-
   .content h2 div {
     width: 5rem;
     margin: 0 1rem 0 8rem;
