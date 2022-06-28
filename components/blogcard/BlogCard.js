@@ -11,7 +11,8 @@ const BlogCard = ({ blogs }) => {
           <Link href={`blog/${blog.id}`}>
             <div className={styles.blogcard} key={blog.id}>
               <div className={styles.imageContainer}>
-                <Image src={blog.image} />
+                <Image src={blog.image}  width={300}
+                  height={300}/>
               </div>
               <div className={styles.blogContent}>
                 <h4> {blog.title} </h4>

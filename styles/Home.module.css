@@ -1,274 +1,279 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  flex-wrap: wrap;
-  /* overflow: hidden; */
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1rem;
+	flex-wrap: wrap;
+	/* overflow: hidden; */
 }
 
 .content h2 {
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 2rem;
-  color: var(--color-subtext);
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  margin: 2rem 0;
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 2rem;
+	color: var(--color-subtext);
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	margin: 2rem 0;
 }
 
 .content h2 div {
-  width: 7rem;
-  height: 0;
-  margin-right: 2rem;
-  background-color: var(--color-subtext);
-  border: 1px solid var(--color-button);
+	width: 7rem;
+	height: 0;
+	margin-right: 2rem;
+	background-color: var(--color-subtext);
+	border: 1px solid var(--color-button);
 }
 
 .description {
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 6rem;
-  color: var(--color-text-accent);
-  text-transform: capitalize;
-  margin: 1.5rem 0 2rem 0;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 6rem;
+	color: var(--color-text-accent);
+	text-transform: capitalize;
+	margin: 1.5rem 0 2rem 0;
 }
 
 .content p {
-  font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: var(--color-text);
-  margin-top: 1rem;
-  padding-right: 2rem;
-  width: 80%;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	color: var(--color-text);
+	margin-top: 1rem;
+	padding-right: 2rem;
+	width: 80%;
 }
 
 .cta {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 3rem;
-}
-
-.ctaButtonContainer,
-.ctaResumeContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 3rem;
 }
 
 .ctaButtonContainer {
-  min-width: 10rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.ctaButtonContainer {
+	min-width: 10rem;
 }
 
 .ctaResumeContainer {
-  width: 12rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	width: 12rem;
 }
 
 .cta button {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-button);
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 9rem;
-  min-height: 3.2rem;
+	padding: 0.5rem 1rem;
+	background-color: var(--color-button);
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	min-width: 9rem;
+	min-height: 3.2rem;
 }
 
-.cta p {
-  color: var(--color-button);
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  outline: none;
-  cursor: pointer;
-  margin: 0;
-  text-decoration: underline;
+.cta a {
+	color: var(--color-button);
+	font-weight: 500;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	outline: none;
+	cursor: pointer;
+	margin: 0;
+	text-decoration: underline;
 }
 .cta p svg {
-  display: inline-block;
-  vertical-align: text-bottom;
-  color: var(--color-button);
+	display: inline-block;
+	vertical-align: text-bottom;
+	border: 1px solid green;
+	margin-left: 0;
+	color: var(--color-button);
 }
 
 .horizontalLine {
-  width: 622px;
-  background: var(--color-text);
-  border: 1px solid #e5e7eb;
-  margin: 1.5rem 0 1rem 0;
+	width: 622px;
+	background: var(--color-text);
+	border: 1px solid #e5e7eb;
+	margin: 1.5rem 0 1rem 0;
 }
 
 .content .headerFooter {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-top: 0.2rem;
-  color: var(--color-text);
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin-top: 0.2rem;
+	color: var(--color-text);
 }
 
 .header .headerImageContainer {
-  display: flex;
-  flex: 0.5;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex: 0.5;
+	justify-content: center;
+	align-items: center;
 }
 
 .header .headerImageContainer img {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
 }
 
 /* Media Queries */
 /* Larger Devices  - any size below 1050px will be affected by this query */
 @media screen and (max-width: 1050px) {
-  .header {
-    flex-direction: column;
-  }
-  .content {
-    align-items: center;
-    margin-bottom: 2rem;
-  }
+	.header {
+		flex-direction: column;
+	}
+	.content {
+		align-items: center;
+		margin-bottom: 2rem;
+	}
 
-  .content h2 {
-    align-self: flex-start;
-  }
+	.content h2 {
+		align-self: flex-start;
+	}
 
-  .content h2 div {
-    margin-left: 1rem;
-  }
+	.content h2 div {
+		margin-left: 1rem;
+	}
 
-  .description {
-    text-align: right;
-    font-size: 2.8rem;
-    line-height: 6rem;
-  }
+	.description {
+		text-align: right;
+		font-size: 2.8rem;
+		line-height: 6rem;
+	}
 
-  .content p {
-    font-size: 1.2rem;
-    padding: 0 0.5rem;
-    text-align: right;
-    align-self: flex-end;
-  }
+	.content p {
+		font-size: 1.2rem;
+		padding: 0 0.5rem;
+		text-align: right;
+		align-self: flex-end;
+	}
 
-  .cta {
-    flex-direction: row-reverse;
-  }
+	.cta {
+		flex-direction: row-reverse;
+	}
 
-  .ctaButtonContainer,
-  .ctaResumeContainer {
-    justify-content: flex-end;
-  }
+	.ctaButtonContainer,
+	.ctaResumeContainer {
+		justify-content: flex-end;
+	}
 
-  .ctaResumeContainer {
-    width: 8rem;
-  }
+	.ctaResumeContainer {
+		width: 8rem;
+	}
 
-  .cta button,
-  .cta p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin: 0;
-  }
+	.cta button,
+	.cta p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin: 0;
+	}
 }
 /* Tablet Devices  - any size below 650px will be affected by this query */
 @media screen and (max-width: 650px) {
-  .header {
-    gap: 3rem;
-  }
+	.header {
+		gap: 3rem;
+	}
 
-  .content h2 div {
-    margin-left: 4rem;
-  }
+	.content h2 div {
+		margin-left: 4rem;
+	}
 
-  .description {
-    text-align: center;
-    font-size: 2rem;
-    line-height: 4rem;
-    padding: 0 4rem;
-  }
+	.description {
+		text-align: center;
+		font-size: 2rem;
+		line-height: 4rem;
+		padding: 0 4rem;
+	}
 
-  .content p {
-    font-size: 1.1rem;
-    text-align: center;
-    align-self: center;
-    padding: 0;
-  }
+	.content p {
+		font-size: 1.1rem;
+		text-align: center;
+		align-self: center;
+		padding: 0;
+	}
 
-  .cta {
-    flex-direction: row;
-    justify-content: center;
-  }
+	.cta {
+		flex-direction: row;
+		justify-content: center;
+	}
 
-  .cta button,
-  .cta p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+	.cta button,
+	.cta p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
 
-  .horizontalLine {
-    background-color: #e5e7eb;
-  }
+	.horizontalLine {
+		background-color: #e5e7eb;
+	}
 
-  .content .headerFooter {
-    margin-top: 0;
-  }
+	.content .headerFooter {
+		margin-top: 0;
+	}
 }
 
 /* Tablet Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
-  .content h2 div {
-    width: 5rem;
-    margin: 0 1rem 0 8rem;
-  }
+	.content h2 div {
+		width: 5rem;
+		margin: 0 1rem 0 8rem;
+	}
 
-  .description {
-    font-size: 1.5rem;
-    line-height: 3rem;
-    padding: 0 8rem;
-  }
+	.description {
+		font-size: 1.5rem;
+		line-height: 3rem;
+		padding: 0 8rem;
+	}
 
-  .content p {
-    font-size: 1rem;
-    padding: 0 1rem;
-    width: 60%;
-  }
+	.content p {
+		font-size: 1rem;
+		padding: 0 1rem;
+		width: 60%;
+	}
 
-  .cta {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
+	.cta {
+		flex-direction: row;
+		justify-content: center;
+		gap: 1rem;
+	}
 
-  .ctaButtonContainer {
-    justify-content: flex-end;
-    margin-left: 3rem;
-  }
+	.ctaButtonContainer {
+		justify-content: flex-end;
+		margin-left: 3rem;
+	}
 
-  .ctaResumeContainer {
-    justify-content: flex-start;
-  }
+	.ctaResumeContainer {
+		justify-content: flex-start;
+	}
 
-  .ctaResumeContainer {
-    width: 12rem;
-  }
+	.ctaResumeContainer {
+		width: 12rem;
+	}
 }

@@ -1,9 +1,13 @@
+import { MongoClient } from "mongodb";
+
+
+
 import BlogCard from "../../components/blogcard/BlogCard";
 
-import Fizzbuzz from "../../assets/fizzbuzz.jpg";
-import OOP from "../../assets/oop.jpg";
-import Palindrome from "../../assets/palindrome.jpg";
-import Hook from "../../assets/react-hooks.jpg";
+// import Fizzbuzz from "../../assets/fizzbuzz.jpg";
+// import OOP from "../../assets/oop.jpg";
+// import Palindrome from "../../assets/palindrome.jpg";
+// import Hook from "../../assets/react-hooks.jpg";
 
 import styles from "./Blog.module.css";
 
@@ -22,51 +26,30 @@ const Blog = ({ blogs }) => {
 };
 
 export async function getStaticProps() {
-  // send http request to fetch data
+  // connecting to our MongoDB database to fetch data
+  const client = await MongoClient.connect(`mongodb+srv://damygoes:${process.env.DB_PASSWORD}@cluster0.nf34c.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`);
 
-  // DUMMY DATA
-  const blogs = [
-    {
-      id: "001",
-      title: "Solving Fizz Buzz",
-      description:
-        "Fizz Buzz is a traditional coding challenge. Here I walked you through my approach to solving the challenge",
-      image: Fizzbuzz,
-      tag: "coding challenge",
-      date: "01 June, 2021",
-    },
-    {
-      id: "002",
-      title: "Object Oriented Programming Explained",
-      description:
-        "I use OOP all the time and I explain here what it means, in simple terms",
-      image: OOP,
-      tag: "article",
-      date: "07 June, 2021",
-    },
-    {
-      id: "003",
-      title: "React Hooks",
-      description:
-        "The most popular and used hooks in the react library are explained in this article",
-      image: Hook,
-      tag: "article",
-      date: "15 June, 2021",
-    },
-    {
-      id: "004",
-      title: "Palindrome",
-      description:
-        "This is a common coding challenge. Read more about how I solved it",
-      image: Palindrome,
-      tag: "coding challenge",
-      date: "18 June, 2021",
-    },
-  ];
+  const db = client.db();
+  const blogData = db.collection("blog");
+  const blogs = await blogData.find({}).toArray();
+  client.close();
+
+  
 
   return {
     props: {
-      blogs: blogs, //from dummy data
+      blogs: blogs.map((blog)=>({
+        title: blog.title,
+        description: blog.description,
+        image: blog.image,
+        tag: blog.tag,
+        date: blog.date,
+        slug: blog.slug,
+        author: blog.author,
+        authorImage: blog.authorImage,
+        summary: blog.summary,
+        id: blog._id.toString(),
+      })) //from MongoDB
     },
   };
 }
