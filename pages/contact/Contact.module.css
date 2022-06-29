@@ -1,315 +1,323 @@
 .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /* height: 100vh; */
-  margin-top: 6rem;
-  padding: 4rem 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	/* height: 100vh; */
+	margin-top: 6rem;
+	/* padding: 4rem 2rem; */
 }
 
 .contactMain {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-right: 2rem;
-  width: 60%;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-right: 2rem;
+	width: 60%;
+	gap: 2rem;
 }
 
 .head {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 2rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2rem;
 }
 
 .head h1 {
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 3rem;
-  text-align: center;
-  color: var(--color-text);
+	font-weight: 600;
+	font-size: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	color: var(--color-text);
 }
 
 .head div {
-  width: 12rem;
-  height: 0;
-  margin-left: 2rem;
-  background-color: var(--color-subtext);
-  border: 1px solid var(--color-button);
+	width: 12rem;
+	height: 0;
+	margin-left: 2rem;
+	background-color: var(--color-subtext);
+	border: 1px solid var(--color-button);
 }
 
 .left p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 2rem;
-  color: var(--color-text-accent);
-  margin-top: 1rem;
-  padding-right: 2rem;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 2rem;
+	color: var(--color-text-accent);
+	margin-top: 1rem;
+	padding-right: 2rem;
 }
 
 .form,
 .form ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
 }
 
 .form ul li {
-  display: block;
-  margin-bottom: 1rem;
+	display: block;
+	margin-bottom: 1rem;
 }
 
 .half {
-  width: 48%;
-  flex: 1;
+	width: 48%;
+	flex: 1;
 }
 
 .half:nth-child(2) {
-  margin-left: 1rem;
-  justify-self: left;
+	margin-left: 1rem;
+	justify-self: left;
 }
 
 .full {
-  width: 100%;
+	width: 100%;
 }
 
 .form input,
 .form textarea {
-  width: 100%;
-  border: none;
-  height: 4rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 3rem;
-  color: var(--color-text);
-  padding: 0 1.2rem;
+	width: 100%;
+	border: none;
+	height: 4rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 3rem;
+	color: var(--color-text);
+	padding: 0 1.2rem;
 }
 
 .form textarea {
-  min-height: 18rem;
-  padding: 1.2rem;
-  resize: none;
+	min-height: 18rem;
+	padding: 1.2rem;
+	resize: none;
 }
 
 .buttonContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  min-width: 10rem;
-  margin-top: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	min-width: 10rem;
+	margin-top: 1rem;
 }
 
 .buttonContainer button {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-button);
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 9rem;
-  min-height: 3.2rem;
-  text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	background-color: var(--color-button);
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	min-width: 9rem;
+	min-height: 3.2rem;
+	text-transform: uppercase;
+}
+
+.buttonContainer p {
+	font-weight: 400;
+	font-size: 0.8rem;
+	font-style: italic;
+	color: var(--color-button);
+	margin-left: 2rem;
 }
 
 .right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 2rem;
-  width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 2rem;
+	width: 40%;
 }
 
 .right .imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 .right .imageContainer img {
-  border-radius: 12px;
+	border-radius: 12px;
 }
 
 .socials {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	width: 100%;
 }
 
 .iconContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
 }
 
 .iconContainer img {
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
 }
 
 .divider {
-  width: 100%;
-  background: var(--color-text);
-  border: 1px solid #e5e7eb;
-  margin-top: 12rem;
+	width: 100%;
+	background: var(--color-text);
+	border: 1px solid #e5e7eb;
+	margin-top: 12rem;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	margin-top: 0;
 }
 
 .footer p {
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 2rem;
-  color: var(--color-text);
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 2rem;
+	color: var(--color-text);
 }
 .footer p span {
-  font-style: italic;
-  color: var(--color-subtext);
+	font-style: italic;
+	color: var(--color-subtext);
 }
 
 /* Media Queries */
 /* Larger Devices  - any size below 1050px will be affected by this query */
 @media screen and (max-width: 1050px) {
-  .contact {
-    padding: 2rem;
-  }
-  .contactMain {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .left {
-    margin-right: 0rem;
-    width: 100%;
-    gap: 2rem;
-  }
-  .left p {
-    margin-bottom: 2rem;
-  }
-  .form {
-    margin-bottom: 6rem;
-  }
-  .half:nth-child(2) {
-    margin-left: 1rem;
-  }
-  .right {
-    flex-direction: row;
-    width: 100%;
-    margin-left: 0rem;
-  }
-  .right .imageContainer {
-    display: none;
-  }
-  .socials {
-    justify-content: center;
-    margin-top: 0rem;
-  }
-  .iconContainer {
-    margin: 0 1rem;
-    width: 40px;
-    height: 40px;
-  }
-  .divider {
-    margin-top: 8rem;
-  }
+	.contact {
+		padding: 2rem;
+	}
+	.contactMain {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.left {
+		margin-right: 0rem;
+		width: 100%;
+		gap: 2rem;
+	}
+	.left p {
+		margin-bottom: 2rem;
+	}
+	.form {
+		margin-bottom: 6rem;
+	}
+	.half:nth-child(2) {
+		margin-left: 1rem;
+	}
+	.right {
+		flex-direction: row;
+		width: 100%;
+		margin-left: 0rem;
+	}
+	.right .imageContainer {
+		display: none;
+	}
+	.socials {
+		justify-content: center;
+		margin-top: 0rem;
+	}
+	.iconContainer {
+		margin: 0 1rem;
+		width: 40px;
+		height: 40px;
+	}
+	.divider {
+		margin-top: 8rem;
+	}
 }
 /* Tablet Devices  - any size below 650px will be affected by this query */
 @media screen and (max-width: 650px) {
-  .contact {
-    padding: 2rem;
-  }
-  .contactMain {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+	.contact {
+		padding: 2rem;
+	}
+	.contactMain {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-  .head {
-    flex-direction: column;
-    width: 100%;
-  }
+	.head {
+		flex-direction: column;
+		width: 100%;
+	}
 
-  .head h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
+	.head h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
 
-  .head div {
-    width: 8rem;
-    margin-left: 0rem;
-  }
+	.head div {
+		width: 8rem;
+		margin-left: 0rem;
+	}
 
-  .left p {
-    margin-bottom: 2rem;
-    text-align: justify;
-    padding-right: 0rem;
-  }
-  .form {
-    margin-bottom: 6rem;
-  }
-  .half {
-    width: 100%;
-    flex: none;
-  }
-  .half:nth-child(2) {
-    margin-left: 0rem;
-  }
-  .buttonContainer button {
-    font-size: 1.2rem;
-    min-width: 7rem;
-  }
-  .divider {
-    margin-top: 6rem;
-  }
+	.left p {
+		margin-bottom: 2rem;
+		text-align: justify;
+		padding-right: 0rem;
+	}
+	.form {
+		margin-bottom: 6rem;
+	}
+	.half {
+		width: 100%;
+		flex: none;
+	}
+	.half:nth-child(2) {
+		margin-left: 0rem;
+	}
+	.buttonContainer button {
+		font-size: 1.2rem;
+		min-width: 7rem;
+	}
+	.divider {
+		margin-top: 6rem;
+	}
 }
 
 /* Tablet Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
-  .contact {
-    padding: 2rem 1rem;
-  }
-  .head h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .buttonContainer button {
-    font-size: 1.2rem;
-    min-width: 7rem;
-  }
-  .socials {
-    justify-content: space-evenly;
-  }
-  .iconContainer {
-    margin: 0rem;
-  }
-  .divider {
-    margin-top: 6rem;
-  }
+	.contact {
+		padding: 2rem 1rem;
+	}
+	.head h1 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+	.buttonContainer button {
+		font-size: 1.2rem;
+		min-width: 7rem;
+	}
+	.socials {
+		justify-content: space-evenly;
+	}
+	.iconContainer {
+		margin: 0rem;
+	}
+	.divider {
+		margin-top: 6rem;
+	}
 }
