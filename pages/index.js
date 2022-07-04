@@ -23,12 +23,23 @@ const HomePage = () => {
 					if you're looking for a creative mind to join your team
 				</p>
 				<div className={styles.cta}>
-					<div className={styles.ctaButtonContainer}>
-						<button type="button">Hire Me</button>
-					</div>
+					<Link href="/contact">
+						<a>
+							<div className={styles.ctaButtonContainer}>
+								{" "}
+								<button type="button" className={styles.hvrBuzzOut}>
+									Hire Me
+								</button>
+							</div>
+						</a>
+					</Link>
 					<div className={styles.ctaResumeContainer}>
 						<Link href="https://drive.google.com/file/d/1pOHoa9EKXqd2i3ST0V4Y8a-Zl3NLZDds/view?usp=sharing">
-							<a target="_blank" rel="noopener noreferrer">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								className={styles.hvrBuzzOut}
+							>
 								Resume <HiOutlineDownload />
 							</a>
 						</Link>
