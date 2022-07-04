@@ -49,7 +49,8 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	flex: 1;
+	max-width: 50%;
+	/* flex: 1; */
 }
 
 .date {
@@ -74,6 +75,7 @@
 .summary {
 	font-weight: 400;
 	font-size: 1rem;
+	font-style: italic;
 	line-height: 2rem;
 	text-align: left;
 	margin-bottom: 2rem;
@@ -92,8 +94,8 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	width: 20%;
-	margin-right: 0rem;
+	width: 12%;
+	margin-right: 2rem;
 }
 
 .authorImageContainer img {
@@ -116,7 +118,7 @@
 .authorDetails h5 {
 	font-weight: 600;
 	font-size: 1rem;
-	line-height: 3rem;
+	line-height: 2.5rem;
 	text-align: justify;
 	color: var(--color-text);
 	margin-bottom: -1.5rem;
@@ -134,7 +136,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	margin-left: 2rem;
-	flex: 0.6;
+	flex: 1;
 }
 
 .right img {
@@ -147,40 +149,114 @@
 
 .bottom {
 	margin-top: 3rem;
-
-	padding: 4rem 6rem;
-}
-
-.bottom h4 {
-	font-weight: 200;
-	font-size: 1rem;
-	line-height: 2.5rem;
-	text-align: left;
-	padding: 0 4rem;
-	color: var(--color-text-accent);
+	padding: 2rem 8rem;
 }
 
 .bottom .empty {
 	width: 100%;
-
 	background: var(--color-text-accent);
 	border: 1px solid #e5e7eb;
 	background: var(--color-button);
 	margin: 2rem 0;
 }
 
-.bottom p {
+.bottom h3 {
 	font-weight: 400;
-	font-size: 1rem;
-	line-height: 2.5rem;
-	margin-top: 3rem;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	margin-bottom: 2rem;
 	text-align: justify;
 	color: var(--color-text);
 }
 
-.bottom p::first-letter {
+.bottom p {
 	font-weight: 400;
-	font-size: 3.5rem;
-	line-height: 3rem;
-	color: var(--color-button);
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-top: 1rem;
+	text-align: justify;
+	color: var(--color-text);
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+	.author {
+		width: 100%;
+	}
+
+	.bottom {
+		padding: 2rem 4rem;
+	}
+}
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+	.container {
+		padding: 0rem;
+	}
+
+	.backnav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: var(--color-text-accent);
+		cursor: pointer;
+	}
+
+	.backnav svg {
+		font-size: 1.5rem;
+		margin-right: 0.5rem;
+	}
+
+	.backnav p {
+		font-size: 1rem;
+		font-style: italic;
+		font-weight: 100;
+		text-transform: lowercase;
+	}
+
+	.top {
+		width: 100%;
+		padding: 1rem;
+		margin-top: 2rem;
+		margin-top: 3rem;
+	}
+
+	.left {
+		align-items: flex-start;
+		max-width: 100%;
+		margin-bottom: 0rem;
+	}
+
+	.author {
+		width: 100%;
+	}
+
+	.right {
+		margin-left: 0.1rem;
+		margin-top: 2rem;
+	}
+
+	.bottom {
+		margin-top: 2rem;
+		padding: 2rem;
+		margin-bottom: 3rem;
+		width: 100%;
+	}
+}
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+	.top {
+		margin-top: 3rem;
+	}
+
+	.bottom {
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+		padding: 1rem;
+		width: 100%;
+	}
 }

@@ -1,5 +1,6 @@
 .container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
@@ -9,35 +10,44 @@
 	position: relative;
 }
 
-.left {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex: 1;
-}
-
-.left div {
+.container .backnav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 5%;
+	top: 0;
 	left: 0;
 	color: var(--color-text-accent);
 	cursor: pointer;
 }
 
-.left div svg {
+.container .backnav svg {
 	font-size: 1.5rem;
 	margin-right: 0.5rem;
 }
 
-.left div p {
+.container .backnav p {
 	font-size: 1rem;
 	font-style: italic;
 	font-weight: 100;
 	text-transform: lowercase;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	/* position: relative; */
+	width: 500px;
+	height: auto;
 }
 
 .left img {
@@ -158,4 +168,85 @@
 	min-height: 3.2rem;
 	margin-right: 2rem;
 	text-transform: capitalize;
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+	.content {
+		flex-direction: column;
+	}
+
+	.left {
+		margin-top: 2rem;
+	}
+
+	.right {
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.head h3 {
+		font-size: 2rem;
+		line-height: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.head p {
+		margin-top: 2rem;
+	}
+
+	.head p::first-letter {
+		font-size: 2.5rem;
+	}
+
+	.tags p {
+		font-size: 1rem;
+		line-height: 2rem;
+	}
+}
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+	.container {
+		padding: 0;
+	}
+
+	.content {
+		margin-top: 2em;
+	}
+
+	.left {
+		width: 450px;
+	}
+
+	.right {
+		margin-top: 3rem;
+		padding: 0;
+	}
+
+	.head h3 {
+		margin: 2rem 0 0 0;
+	}
+
+	.linksContainer {
+		margin-bottom: 3rem;
+	}
+}
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+	.content {
+		flex-direction: column-reverse;
+	}
+	.left {
+		width: 320px;
+	}
+
+	.head h3 {
+		font-size: 1.5rem;
+		line-height: 1rem;
+	}
+
+	.left {
+		margin-bottom: 3rem;
+	}
 }

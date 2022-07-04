@@ -11,61 +11,65 @@ const ProjectDetail = ({ project }) => {
 	const router = useRouter();
 	return (
 		<div className={styles.container}>
-			<div className={styles.left}>
-				<div
+			<div
+				className={styles.backnav}
+				onClick={() => {
+					router.push("/projects");
+				}}
+			>
+				{" "}
+				<HiOutlineArrowLeft
+					onClick={() => {
+						router.push("/projects");
+					}}
+				/>{" "}
+				<p
 					onClick={() => {
 						router.push("/projects");
 					}}
 				>
-					{" "}
-					<HiOutlineArrowLeft
-						onClick={() => {
-							router.push("/projects");
-						}}
-					/>{" "}
-					<p
-						onClick={() => {
-							router.push("/projects");
-						}}
-					>
-						Back to projects
-					</p>{" "}
-				</div>
-				<Image
-					src={project.image}
-					alt={project.title}
-					width={500}
-					height={500}
-				/>
+					Back to projects
+				</p>{" "}
 			</div>
-			<div className={styles.right}>
-				<div className={styles.head}>
-					<h3> {project.title} </h3>
-					<p> {project.detail} </p>
+			<div className={styles.content}>
+				<div className={styles.left}>
+					<Image
+						src={project.image}
+						alt={project.title}
+						// layout="responsive"
+						width={500}
+						height={500}
+					/>
 				</div>
-				<div className={styles.tags}>
-					<p>
-						{" "}
-						Project: <span> {project.description}</span>{" "}
-					</p>
-					<p>
-						{" "}
-						Technologies: <span> {project.tech} </span>
-					</p>
-				</div>
-				<div className={styles.linksContainer}>
-					<Link href={project.deployed}>
-						<a target="_blank" rel="noreferrer">
+				<div className={styles.right}>
+					<div className={styles.head}>
+						<h3> {project.title} </h3>
+						<p> {project.detail} </p>
+					</div>
+					<div className={styles.tags}>
+						<p>
 							{" "}
-							<button type="button">live demo</button>
-						</a>
-					</Link>
-					<Link href={project.github}>
-						<a target="_blank" rel="noreferrer">
+							Project: <span> {project.description}</span>{" "}
+						</p>
+						<p>
 							{" "}
-							<button type="button">Github Repo</button>
-						</a>
-					</Link>
+							Technologies: <span> {project.tech} </span>
+						</p>
+					</div>
+					<div className={styles.linksContainer}>
+						<Link href={project.deployed}>
+							<a target="_blank" rel="noreferrer">
+								{" "}
+								<button type="button">live demo</button>
+							</a>
+						</Link>
+						<Link href={project.github}>
+							<a target="_blank" rel="noreferrer">
+								{" "}
+								<button type="button">Github Repo</button>
+							</a>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
