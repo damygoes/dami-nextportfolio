@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "@animxyz/core";
 
 import styles from "./Blogcard.module.css";
 
@@ -9,7 +10,11 @@ const BlogCard = ({ blog }) => {
 	return (
 		<>
 			<Link href={`blog/${blog.fields.slug}`}>
-				<div className={styles.blogcard} key={blog.sys.id}>
+				<div
+					className={styles.blogcard + " " + "xyz-in"}
+					key={blog.sys.id}
+					xyz="fade front flip-left delay-2 duration-5"
+				>
 					<div className={styles.imageContainer}>
 						<Image
 							src={"https:" + image.fields.file.url}

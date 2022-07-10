@@ -1,6 +1,8 @@
 // import { MongoClient } from "mongodb";
 import { createClient } from "contentful";
 
+import "@animxyz/core";
+
 import BlogCard from "../../components/blogcard/BlogCard";
 
 // import Fizzbuzz from "../../assets/fizzbuzz.jpg";
@@ -15,8 +17,10 @@ const Blog = ({ blogs }) => {
 	return (
 		<section className={styles.blog}>
 			<div className={styles.bloghead}>
-				<h3>My Blog</h3>
-				<div></div>
+				<h3 className="xyz-in" xyz="fade in-left duration-5">
+					My Blog
+				</h3>
+				<div className="xyz-in" xyz="fade in-right delay-1 duration-5"></div>
 			</div>
 			<div className={styles.blogbody}>
 				{blogs.map((blog) => (

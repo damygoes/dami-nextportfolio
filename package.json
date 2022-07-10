@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@animxyz/core": "^0.6.6",
     "@contentful/rich-text-react-renderer": "^15.12.1",
     "@sendgrid/mail": "^7.7.0",
     "contentful": "^9.1.32",

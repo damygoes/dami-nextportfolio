@@ -11,7 +11,7 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	return (
-		<header className={styles.header}>
+		<header className={styles.header + " " + "xyz-in"} xyz="fade delay-0.5">
 			<Link href="/">
 				<div
 					className={styles.logo}

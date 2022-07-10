@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import "@animxyz/core";
 
 import {
 	Github,
@@ -104,16 +105,17 @@ const Contact = () => {
 				<div className={styles.contactMain}>
 					<div className={styles.left}>
 						<div className={styles.head}>
-							<h1>Contact Me</h1>
-							<div></div>
+							<h1 className="xyz-in" xyz="fade in-left duration-5">
+								Contact Me
+							</h1>
+							<div className="xyz-in" xyz="fade in-right delay-1 duration-5"></div>
 						</div>
 
-						<p>
+						<p className="xyz-in" xyz="fade in-left delay-1 duration-6">
 							{" "}
-							I am interested in and currently looking for new job
-							opportunities. However, if you have any question or request, don't
-							hesitate to contact me using the form below or my social network
-							links.
+							I am interested in and currently looking for new job opportunities.
+							However, if you have any question or request, don't hesitate to contact
+							me using the form below or my social network links.
 						</p>
 
 						<form className={styles.form} onSubmit={handleSubmit}>
@@ -128,6 +130,8 @@ const Contact = () => {
 											setName(e.target.value);
 											showSuccessMessage && setName(e.target.value === "");
 										}}
+										className="xyz-in"
+										xyz="fade in delay-4 duration-6"
 									/>
 								</li>
 								<li className={styles.half}>
@@ -139,6 +143,8 @@ const Contact = () => {
 										onChange={(e) => {
 											setEmail(e.target.value);
 										}}
+										className="xyz-in"
+										xyz="fade in delay-5 duration-6"
 									/>
 								</li>
 								<li className={styles.full}>
@@ -150,6 +156,8 @@ const Contact = () => {
 										onChange={(e) => {
 											setSubject(e.target.value);
 										}}
+										className="xyz-in"
+										xyz="fade in delay-6 duration-6"
 									/>
 								</li>
 								<li className={styles.full}>
@@ -160,56 +168,91 @@ const Contact = () => {
 										onChange={(e) => {
 											setMessage(e.target.value);
 										}}
+										className="xyz-in"
+										xyz="fade in delay-7 duration-6"
 									></textarea>
 								</li>
 								<div className={styles.buttonContainer}>
-									<button type="submit"> {buttonText} </button>
+									<button
+										type="submit"
+										className="xyz-in"
+										xyz="fade in-left delay-5 duration-6"
+									>
+										{" "}
+										{buttonText}{" "}
+									</button>
 									{showSuccessMessage && (
 										<p>Thank you. I will get back to you as soon as possible</p>
 									)}
-									{showFailureMessage && (
-										<p>Unfortunately!, something went wrong</p>
-									)}
+									{showFailureMessage && <p>Unfortunately!, something went wrong</p>}
 								</div>
 							</ul>
 						</form>
 					</div>
 					<div className={styles.right}>
-						<div className={styles.imageContainer}>
+						<div
+							className={styles.imageContainer + " " + "xyz-in"}
+							xyz="fade flip-right perspective-5 delay-3 duration-5"
+						>
 							<Image src={ContactImage} />
 						</div>
 						<div className={styles.socials}>
 							<div className={styles.iconContainer}>
 								<Link href="mailto:badadamilola@gmx.de">
-									<a target="_blank" rel="noreferrer">
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="xyz-in"
+										xyz="fade front flip-left delay-2 duration-5"
+									>
 										<Image src={Email} />
 									</a>
 								</Link>
 							</div>
 							<div className={styles.iconContainer}>
 								<Link href="https://www.linkedin.com/in/damilolabada/">
-									<a target="_blank" rel="noreferrer">
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="xyz-in"
+										xyz="fade front flip-left delay-4 duration-5"
+									>
 										<Image src={LinkedIn} />
 									</a>
 								</Link>
 							</div>
 							<div className={styles.iconContainer}>
 								<Link href="https://github.com/damygoes">
-									<a target="_blank" rel="noreferrer">
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="xyz-in"
+										xyz="fade front flip-left delay-6 duration-5"
+									>
 										<Image src={Github} />
 									</a>
 								</Link>
 							</div>
 							<div className={styles.iconContainer}>
 								<Link href="https://twitter.com/damygoes">
-									<a target="_blank" rel="noreferrer">
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="xyz-in"
+										xyz="fade front flip-left delay-8 duration-5"
+									>
 										<Image src={Twitter} />
 									</a>
 								</Link>
 							</div>
 							<div className={styles.iconContainer}>
 								<Link href="https://www.instagram.com/damy.goes/">
-									<a target="_blank" rel="noreferrer">
+									<a
+										target="_blank"
+										rel="noreferrer"
+										className="xyz-in"
+										xyz="fade front flip-left delay-10 duration-5"
+									>
 										<Image src={Instagram} />
 									</a>
 								</Link>
@@ -218,9 +261,9 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.divider}></div>
+			<div className={styles.divider + " " + "xyz-in"} xyz="fade delay-4"></div>
 			<div className={styles.footer}>
-				<p>
+				<p className="xyz-in" xyz="fade in delay-6">
 					{" "}
 					Designed by <span>Damilola Bada</span>{" "}
 				</p>
