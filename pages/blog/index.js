@@ -17,10 +17,10 @@ const Blog = ({ blogs }) => {
 	return (
 		<section className={styles.blog}>
 			<div className={styles.bloghead}>
-				<h3 className="xyz-in" xyz="fade in-left duration-5">
+				<h3 className="xyz-in" xyz="fade in-left duration-2">
 					My Blog
 				</h3>
-				<div className="xyz-in" xyz="fade in-right delay-1 duration-5"></div>
+				<div className="xyz-in" xyz="fade in-right delay-1 duration-2"></div>
 			</div>
 			<div className={styles.blogbody}>
 				{blogs.map((blog) => (

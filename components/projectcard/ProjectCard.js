@@ -25,7 +25,7 @@ const ProjectCard = ({ projects }) => {
 						<div
 							className={styles.projectCard + " " + "xyz-in"}
 							key={project.id}
-							xyz="fade front flip-left delay-2 duration-5"
+							xyz="fade front flip-left delay-2 duration-2 stagger"
 						>
 							<div className={styles.imageContainer}>
 								<Image
@@ -59,7 +59,7 @@ const ProjectCard = ({ projects }) => {
 					<div
 						className={styles.comingSoon + " " + "xyz-in"}
 						key={project.id}
-						xyz="fade front flip-left delay-2 duration-5"
+						xyz="fade front flip-left delay-2 duration-2"
 					>
 						<div className={styles.imageContainer}>
 							<Image

@@ -21,10 +21,10 @@ const Projects = ({ projects }) => {
 	return (
 		<section className={styles.projects}>
 			<div className={styles.head}>
-				<h3 className="xyz-in" xyz="fade in-left duration-5">
+				<h3 className="xyz-in" xyz="fade in-left duration-2">
 					My recent projects
 				</h3>
-				<div className="xyz-in" xyz="fade in-right delay-1 duration-5"></div>
+				<div className="xyz-in" xyz="fade in-right delay-1 duration-2"></div>
 			</div>
 			<div className={styles.body}>
 				<ProjectCard projects={projects} />

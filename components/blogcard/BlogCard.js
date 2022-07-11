@@ -13,7 +13,7 @@ const BlogCard = ({ blog }) => {
 				<div
 					className={styles.blogcard + " " + "xyz-in"}
 					key={blog.sys.id}
-					xyz="fade front flip-left delay-2 duration-5"
+					xyz="fade front flip-left delay-2 duration-2 stagger"
 				>
 					<div className={styles.imageContainer}>
 						<Image

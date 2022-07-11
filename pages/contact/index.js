@@ -105,13 +105,13 @@ const Contact = () => {
 				<div className={styles.contactMain}>
 					<div className={styles.left}>
 						<div className={styles.head}>
-							<h1 className="xyz-in" xyz="fade in-left duration-5">
+							<h1 className="xyz-in" xyz="fade in-left duration-2">
 								Contact Me
 							</h1>
-							<div className="xyz-in" xyz="fade in-right delay-1 duration-5"></div>
+							<div className="xyz-in" xyz="fade in-right delay-1 duration-2"></div>
 						</div>
 
-						<p className="xyz-in" xyz="fade in-left delay-1 duration-6">
+						<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
 							{" "}
 							I am interested in and currently looking for new job opportunities.
 							However, if you have any question or request, don't hesitate to contact
@@ -131,7 +131,7 @@ const Contact = () => {
 											showSuccessMessage && setName(e.target.value === "");
 										}}
 										className="xyz-in"
-										xyz="fade in delay-4 duration-6"
+										xyz="fade in delay-4 duration-2"
 									/>
 								</li>
 								<li className={styles.half}>
@@ -144,7 +144,7 @@ const Contact = () => {
 											setEmail(e.target.value);
 										}}
 										className="xyz-in"
-										xyz="fade in delay-5 duration-6"
+										xyz="fade in delay-5 duration-2"
 									/>
 								</li>
 								<li className={styles.full}>
@@ -157,7 +157,7 @@ const Contact = () => {
 											setSubject(e.target.value);
 										}}
 										className="xyz-in"
-										xyz="fade in delay-6 duration-6"
+										xyz="fade in delay-6 duration-2"
 									/>
 								</li>
 								<li className={styles.full}>
@@ -169,14 +169,14 @@ const Contact = () => {
 											setMessage(e.target.value);
 										}}
 										className="xyz-in"
-										xyz="fade in delay-7 duration-6"
+										xyz="fade in delay-7 duration-2"
 									></textarea>
 								</li>
 								<div className={styles.buttonContainer}>
 									<button
 										type="submit"
 										className="xyz-in"
-										xyz="fade in-left delay-5 duration-6"
+										xyz="fade in-left delay-5 duration-2"
 									>
 										{" "}
 										{buttonText}{" "}
@@ -192,7 +192,7 @@ const Contact = () => {
 					<div className={styles.right}>
 						<div
 							className={styles.imageContainer + " " + "xyz-in"}
-							xyz="fade flip-right perspective-5 delay-3 duration-5"
+							xyz="fade flip-right perspective-5 delay-3 duration-2"
 						>
 							<Image src={ContactImage} />
 						</div>
@@ -203,7 +203,7 @@ const Contact = () => {
 										target="_blank"
 										rel="noreferrer"
 										className="xyz-in"
-										xyz="fade front flip-left delay-2 duration-5"
+										xyz="fade front flip-left delay-2 duration-2"
 									>
 										<Image src={Email} />
 									</a>
@@ -215,7 +215,7 @@ const Contact = () => {
 										target="_blank"
 										rel="noreferrer"
 										className="xyz-in"
-										xyz="fade front flip-left delay-4 duration-5"
+										xyz="fade front flip-left delay-4 duration-2"
 									>
 										<Image src={LinkedIn} />
 									</a>
@@ -227,7 +227,7 @@ const Contact = () => {
 										target="_blank"
 										rel="noreferrer"
 										className="xyz-in"
-										xyz="fade front flip-left delay-6 duration-5"
+										xyz="fade front flip-left delay-6 duration-2"
 									>
 										<Image src={Github} />
 									</a>
@@ -239,7 +239,7 @@ const Contact = () => {
 										target="_blank"
 										rel="noreferrer"
 										className="xyz-in"
-										xyz="fade front flip-left delay-8 duration-5"
+										xyz="fade front flip-left delay-8 duration-2"
 									>
 										<Image src={Twitter} />
 									</a>
@@ -251,7 +251,7 @@ const Contact = () => {
 										target="_blank"
 										rel="noreferrer"
 										className="xyz-in"
-										xyz="fade front flip-left delay-10 duration-5"
+										xyz="fade front flip-left delay-10 duration-2"
 									>
 										<Image src={Instagram} />
 									</a>
