@@ -31,14 +31,14 @@ const ProjectCard = ({ projects }) => {
 								<Image
 									src={project.image}
 									alt={project.title}
-									width={300}
-									height={300}
+									layout="fill"
+									objectFit="cover"
 								/>
 							</div>
 							<div className={styles.projectContent}>
 								<h4> {project.title} </h4>
-								{/* <p> {project.description} </p> */}
-								<div className={styles.projectLinks}>
+								<p> {project.description} </p>
+								{/* <div className={styles.projectLinks}>
 									<Link href={project.deployed}>
 										<a target="_blank" rel="noreferrer">
 											{" "}
@@ -51,7 +51,7 @@ const ProjectCard = ({ projects }) => {
 											<GrGithub />
 										</a>
 									</Link>
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</Link>

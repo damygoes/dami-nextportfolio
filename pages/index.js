@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-import { HiOutlineDownload } from "react-icons/hi";
+import {
+	HiOutlineDownload,
+	HiOutlineChevronLeft,
+	HiOutlineChevronRight,
+} from "react-icons/hi";
+import { CgFormatSlash } from "react-icons/cg";
 import "@animxyz/core";
 
 import Portrait from "../assets/portrait.jpg";
@@ -78,6 +83,15 @@ const HomePage = () => {
 				>
 					<Image src={Portrait} alt="Dami's Portrait" />
 				</div>
+				<Link href={"/skills"}>
+					<div
+						className={styles.pageNav + " " + "xyz-in"}
+						xyz="fade in-right delay-6 duration-5"
+					>
+						<HiOutlineChevronLeft /> <p>skills</p> <CgFormatSlash />{" "}
+						<HiOutlineChevronRight />
+					</div>
+				</Link>
 			</div>
 		)
 	);

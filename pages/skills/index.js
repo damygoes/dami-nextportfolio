@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import "@animxyz/core";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import { CgFormatSlash } from "react-icons/cg";
 import Cta from "../../components/cta/Cta";
 import {
 	Bootstrap,
@@ -79,6 +82,24 @@ const Skills = () => {
 				</div>
 			</div>
 			<Cta />
+			<Link href={"/"}>
+				<div
+					className={styles.pageBackNav + " " + "xyz-in"}
+					xyz="fade in-left delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>home</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
+			<Link href={"/projects"}>
+				<div
+					className={styles.pageNav + " " + "xyz-in"}
+					xyz="fade in-right delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>projects</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
 		</section>
 	);
 };

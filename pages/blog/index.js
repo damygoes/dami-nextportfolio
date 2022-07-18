@@ -1,14 +1,10 @@
-// import { MongoClient } from "mongodb";
+import Link from "next/link";
 import { createClient } from "contentful";
-
 import "@animxyz/core";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import { CgFormatSlash } from "react-icons/cg";
 
 import BlogCard from "../../components/blogcard/BlogCard";
-
-// import Fizzbuzz from "../../assets/fizzbuzz.jpg";
-// import OOP from "../../assets/oop.jpg";
-// import Palindrome from "../../assets/palindrome.jpg";
-// import Hook from "../../assets/react-hooks.jpg";
 
 import styles from "./Blog.module.css";
 
@@ -18,7 +14,7 @@ const Blog = ({ blogs }) => {
 		<section className={styles.blog}>
 			<div className={styles.bloghead}>
 				<h3 className="xyz-in" xyz="fade in-left duration-2">
-					My Blog
+					My Development Logbook
 				</h3>
 				<div className="xyz-in" xyz="fade in-right delay-1 duration-2"></div>
 			</div>
@@ -27,6 +23,24 @@ const Blog = ({ blogs }) => {
 					<BlogCard blog={blog} key={blog.sys.id} />
 				))}
 			</div>
+			<Link href={"/projects"}>
+				<div
+					className={styles.pageBackNav + " " + "xyz-in"}
+					xyz="fade in-left delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>projects</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
+			<Link href={"/contact"}>
+				<div
+					className={styles.pageNav + " " + "xyz-in"}
+					xyz="fade in-right delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>contact</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
 		</section>
 	);
 };

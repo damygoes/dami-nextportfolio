@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import Logo from "../../assets/logo2.svg";
+import Logo from "../../assets/logo-overline.svg";
 
 import styles from "./Navbar.module.css";
 
@@ -38,7 +38,7 @@ const Navbar = () => {
 						<Link href="/projects"> Projects </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/blog"> Blog </Link>
+						<Link href="/blog"> Devlog </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
 						<Link href="/contact"> Contact </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
 										setToggleMenu(false);
 									}}
 								>
-									<Link href="/blog"> Blog </Link>
+									<Link href="/blog"> Devlog </Link>
 								</li>
 								<li
 									onClick={() => {

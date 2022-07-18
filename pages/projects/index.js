@@ -1,13 +1,10 @@
+import Link from "next/link";
 import { MongoClient } from "mongodb";
-
 import "@animxyz/core";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import { CgFormatSlash } from "react-icons/cg";
 
 import ProjectCard from "../../components/projectcard/ProjectCard";
-
-// import ProjectOne from "../../assets/project1.jpg";
-// import ProjectTwo from "../../assets/project2.jpg";
-// import ProjectThree from "../../assets/project3.jpg";
-// import ProjectFour from "../../assets/project4.jpg";
 
 import styles from "./Projects.module.css";
 
@@ -29,6 +26,24 @@ const Projects = ({ projects }) => {
 			<div className={styles.body}>
 				<ProjectCard projects={projects} />
 			</div>
+			<Link href={"/skills"}>
+				<div
+					className={styles.pageBackNav + " " + "xyz-in"}
+					xyz="fade in-left delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>skills</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
+			<Link href={"/blog"}>
+				<div
+					className={styles.pageNav + " " + "xyz-in"}
+					xyz="fade in-right delay-6 duration-5"
+				>
+					<HiOutlineChevronLeft /> <p>devlog</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronRight />
+				</div>
+			</Link>
 		</section>
 	);
 };

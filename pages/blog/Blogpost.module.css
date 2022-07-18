@@ -178,6 +178,12 @@
 	color: var(--color-text);
 }
 
+.bottom article img {
+	width: 50%;
+	height: 50%;
+	border-radius: 12px;
+	margin: 3rem auto;
+}
 .bottom article h1 {
 	font-size: 2.8rem;
 	font-weight: 400;
@@ -208,6 +214,18 @@
 .bottom article ol li {
 	list-style-type: decimal;
 	margin-left: 1.5rem;
+}
+.bottom article ul li {
+	list-style-type: square;
+	margin-left: 1.5rem;
+}
+
+.bottom article pre {
+	margin: 3rem;
+}
+.bottom article code {
+	font-size: 1.2rem;
+	line-height: 2rem;
 }
 
 /* Media Queries */

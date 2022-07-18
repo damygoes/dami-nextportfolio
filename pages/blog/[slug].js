@@ -3,10 +3,12 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+import { BLOCKS } from "@contentful/rich-text-types";
+import Highlight from "react-highlight";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 
 import styles from "./Blogpost.module.css";
+import "highlight.js/styles/agate.css";
 
 const BlogPost = ({ blog }) => {
 	const {
@@ -22,6 +24,63 @@ const BlogPost = ({ blog }) => {
 		content,
 	} = blog.fields;
 	const router = useRouter();
+
+	// Embedding Contentful
+	const renderOptions = {
+		renderNode: {
+			// [INLINES.EMBEDDED_ENTRY]: (node, children) => {
+			// 	// target the contentType of the EMBEDDED_ENTRY to display as you need
+			// 	if (node.data.target.sys.contentType.sys.id === "blogPost") {
+			// 		return (
+			// 			<a href={`/blog/${node.data.target.fields.slug}`}>
+			// 				{" "}
+			// 				{node.data.target.fields.title}
+			// 			</a>
+			// 		);
+			// 	}
+			// },
+			[BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+				// target the contentType of the EMBEDDED_ENTRY to display as you need
+				if (node.data.target.sys.contentType.sys.id === "codeBlock") {
+					return (
+						<Highlight className="javascript">
+							<pre>
+								<code>{node.data.target.fields.codeContent}</code>
+							</pre>
+						</Highlight>
+					);
+				}
+
+				// if (node.data.target.sys.contentType.sys.id === "videoEmbed") {
+				// 	return (
+				// 		<iframe
+				// 			src={node.data.target.fields.embedUrl}
+				// 			height="100%"
+				// 			width="100%"
+				// 			frameBorder="0"
+				// 			scrolling="no"
+				// 			title={node.data.target.fields.title}
+				// 			allowFullScreen={true}
+				// 		/>
+				// 	);
+				// }
+			},
+
+			[BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+				// render the EMBEDDED_ASSET as you need
+				return (
+					<img
+						src={`https://${node.data.target.fields.file.url}`}
+						height={node.data.target.fields.file.details.image.height}
+						width={node.data.target.fields.file.details.image.width}
+						alt={node.data.target.fields.description}
+					/>
+				);
+			},
+		},
+	};
+
+	// ######################################
 	return (
 		// <h1> {title} </h1>
 		<section className={styles.container}>
@@ -79,7 +138,7 @@ const BlogPost = ({ blog }) => {
 			<section className={styles.bottom}>
 				{/* <h4 className={styles.highlight}> {summary} </h4> */}
 				<div className={styles.empty}></div>
-				<article> {documentToReactComponents(content)} </article>
+				<article> {documentToReactComponents(content, renderOptions)} </article>
 			</section>
 		</section>
 	);
