@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import Logo from "../../assets/logo-overline.svg";
+// import Logo from "../../assets/logo-overline.svg";
 
 import styles from "./Navbar.module.css";
 
@@ -19,14 +19,14 @@ const Navbar = () => {
 						setToggleMenu(false);
 					}}
 				>
-					{" "}
-					<Image
+					<h1>dami</h1>
+					{/* <Image
 						src={Logo}
 						alt="logo"
 						onClick={() => {
 							setToggleMenu(false);
 						}}
-					/>{" "}
+					/> */}
 				</div>
 			</Link>
 			<nav>
