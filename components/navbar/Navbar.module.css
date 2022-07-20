@@ -133,14 +133,14 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	gap: 2rem;
+	gap: 1.5rem;
 }
 
 .mobileLinks li {
 	color: var(--color-text);
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 2rem;
-	line-height: 2.5rem;
+	line-height: 2rem;
 	text-transform: capitalize;
 	margin: 1rem 0;
 	cursor: pointer;
@@ -273,8 +273,9 @@
 
 	.mobileLinks {
 		top: 3rem;
+		right: -259%;
 		margin-top: 1.2rem;
-		width: 80vw;
+		width: 100vw;
 		height: 100vh;
 	}
 
@@ -293,10 +294,10 @@
 	}
 	.mobileLinks {
 		top: 3rem;
+		right: -172%;
 		margin-top: 1.2rem;
-
-		/* width: 80vw;
-    height: 70vh; */
+		width: 100vw;
+		height: 100vh;
 	}
 }
 /* Mobile Devices  - any size below 550px will be affected by this query */
@@ -314,8 +315,9 @@
 	}
 	.mobileLinks {
 		top: 3rem;
+		right: -87%;
 		margin-top: 1.2rem;
-		width: 88vw;
+		width: 100vw;
 		height: 100vh;
 	}
 

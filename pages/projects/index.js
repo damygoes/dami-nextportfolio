@@ -23,7 +23,7 @@ const Projects = ({ projects }) => {
 				</h3>
 				<div className="xyz-in" xyz="fade in-right delay-1 duration-2"></div>
 			</div>
-			<div className={styles.body}>
+			<div className={styles.cardContainer}>
 				<ProjectCard projects={projects} />
 			</div>
 			<Link href={"/skills"}>

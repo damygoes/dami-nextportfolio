@@ -92,7 +92,24 @@
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
-	.dami__blogcard-content_bottom h4 {
+	/* .blogContent h4 {
 		font-size: 1.2rem;
+		border: 1px solid red;
+	} */
+}
+@media screen and (max-width: 280px) {
+	.blogcard {
+		height: fit-content;
+		justify-content: flex-start;
+		padding: 1rem;
+	}
+	.imageContainer {
+		align-items: flex-start;
+		margin-bottom: 0rem;
+		height: 15rem;
+	}
+	.blogTags {
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }

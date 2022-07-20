@@ -32,7 +32,7 @@ const ProjectCard = ({ projects }) => {
 									src={project.image}
 									alt={project.title}
 									layout="fill"
-									objectFit="cover"
+									objectFit="fill"
 								/>
 							</div>
 							<div className={styles.projectContent}>

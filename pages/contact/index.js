@@ -10,6 +10,7 @@ import {
 	Twitter,
 	Instagram,
 	ContactImage,
+	ContactImagePNG,
 } from "./assets";
 
 import styles from "./Contact.module.css";
@@ -175,11 +176,10 @@ const Contact = () => {
 								<div className={styles.buttonContainer}>
 									<button
 										type="submit"
-										className="xyz-in"
+										className={"xyz-in"}
 										xyz="fade in-left delay-5 duration-2"
 									>
-										{" "}
-										{buttonText}{" "}
+										{buttonText}
 									</button>
 									{showSuccessMessage && (
 										<p>Thank you. I will get back to you as soon as possible</p>
@@ -194,7 +194,7 @@ const Contact = () => {
 							className={styles.imageContainer + " " + "xyz-in"}
 							xyz="fade flip-right perspective-5 delay-3 duration-2"
 						>
-							<Image src={ContactImage} />
+							<Image src={ContactImagePNG} />
 						</div>
 						<div className={styles.socials}>
 							<div className={styles.iconContainer}>

@@ -340,6 +340,7 @@
 @media screen and (max-width: 650px) {
 	.header {
 		gap: 3rem;
+		height: fit-content;
 	}
 
 	.content h2 div {
@@ -378,6 +379,12 @@
 	.content .headerFooter {
 		margin-top: 0;
 	}
+	.header .headerImageContainer {
+		margin-left: 0rem;
+	}
+	.pageNav {
+		margin-right: 0;
+	}
 }
 
 /* Tablet Devices  - any size below 490px will be affected by this query */
@@ -400,13 +407,6 @@
 	.content h2 {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		/* font-weight: 500;
-		line-height: 2rem;
-		color: var(--color-subtext);
-		display: flex;
-		align-items: center;
-		text-transform: capitalize;
-		margin: 2rem 0 1rem 0; */
 	}
 
 	.description {
@@ -421,14 +421,6 @@
 		padding: 0 1.5rem;
 		width: 60%;
 	}
-
-	/* font-weight: 400;
-	font-size: 1rem;
-	line-height: 2rem;
-	color: var(--color-text);
-	margin-top: 1rem;
-	/* padding-right: 2rem; 
-	width: 80%; */
 
 	.cta {
 		flex-direction: row;
@@ -449,7 +441,7 @@
 		width: 12rem;
 	}
 	.header .headerImageContainer {
-		margin-left: 0;
+		margin: 0 0 3rem 0;
 	}
 
 	.pageNav {
@@ -500,7 +492,7 @@
 	}
 
 	.header .headerImageContainer {
-		margin-left: 0;
+		margin: 0 0 3rem 0;
 	}
 
 	.pageNav {

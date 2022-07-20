@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@animxyz/core";
 import styles from "./Cta.module.css";
 
@@ -9,7 +10,11 @@ const Cta = () => {
 				<p> I am available for fulltime or freelance work. </p>
 			</div>
 			<div className={styles.buttonContainer}>
-				<button type="button">Hire Me</button>
+				<Link href={"/contact"}>
+					<button type="button" className={styles.hvrSweepToRight}>
+						Hire Me
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

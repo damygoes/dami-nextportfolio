@@ -19,11 +19,13 @@
 	left: 0;
 	color: var(--color-text-accent);
 	cursor: pointer;
+	transition: 200ms all ease-in-out;
 }
 
 .container .backnav svg {
 	font-size: 1.5rem;
 	margin-right: 0.5rem;
+	transition: 200ms all ease-in-out;
 }
 
 .container .backnav p {
@@ -31,6 +33,13 @@
 	font-style: italic;
 	font-weight: 100;
 	text-transform: lowercase;
+	transition: 200ms all ease-in-out;
+}
+.container .backnav:hover,
+.container .backnav svg:hover,
+.container .backnav p:hover {
+	color: var(--color-button);
+	transform: scale(1.1);
 }
 
 .content {
@@ -234,6 +243,14 @@
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
+	.container {
+		margin-top: 2rem;
+		padding: 2rem;
+	}
+	.container .backnav {
+		top: 2%;
+		left: 5%;
+	}
 	.content {
 		flex-direction: column-reverse;
 	}
@@ -245,8 +262,54 @@
 		font-size: 1.5rem;
 		line-height: 1rem;
 	}
+	.head p {
+		line-height: 2rem;
+		margin-top: 2rem;
+	}
+	.tags p span {
+		text-align: left;
+	}
 
 	.left {
 		margin-bottom: 3rem;
+	}
+	.linksContainer button {
+		min-width: 9rem;
+		min-height: 3rem;
+		margin-right: 1rem;
+	}
+}
+@media screen and (max-width: 280px) {
+	.container {
+		margin-top: 2rem;
+	}
+	.container .backnav {
+		top: 2%;
+		left: 7%;
+	}
+
+	.left {
+		width: 250px;
+	}
+
+	.head h3 {
+		font-size: 1.5rem;
+		line-height: 1rem;
+	}
+
+	.tags p span {
+		text-align: left;
+	}
+
+	.left {
+		margin-bottom: 3rem;
+	}
+	.linksContainer {
+		flex-direction: column;
+		gap: 2rem;
+		flex-wrap: wrap;
+	}
+	.linksContainer button {
+		margin-right: 0rem;
 	}
 }
