@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import "@animxyz/core";
 
@@ -16,6 +17,8 @@ import {
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+	const router = useRouter();
+
 	// States for contact form fields
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -93,9 +96,12 @@ const Contact = () => {
 			setShowFailureMessage(false);
 			setButtonText("Send");
 
-			setEmail(" ");
-			setSubject(" ");
-			setMessage(" ");
+			// setEmail(" ");
+			// setSubject(" ");
+			// setMessage(" ");
+			setTimeout(() => {
+				router.push("/");
+			}, 1500);
 		}
 		// console.log(name, email, subject, message);
 	};

@@ -60,13 +60,17 @@ const ProjectDetail = ({ project }) => {
 						<Link href={project.deployed}>
 							<a target="_blank" rel="noreferrer">
 								{" "}
-								<button type="button">live demo</button>
+								<button type="button" className={styles.hvrSweepToRight}>
+									live website
+								</button>
 							</a>
 						</Link>
 						<Link href={project.github}>
 							<a target="_blank" rel="noreferrer">
 								{" "}
-								<button type="button">Github Repo</button>
+								<button type="button" className={styles.hvrSweepToRight}>
+									Github Repo
+								</button>
 							</a>
 						</Link>
 					</div>

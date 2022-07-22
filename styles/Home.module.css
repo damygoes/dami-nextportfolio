@@ -16,6 +16,7 @@
 	padding: 1rem;
 	flex-wrap: wrap;
 	margin-right: 1rem;
+	z-index: 1;
 }
 
 .content h2 {
@@ -137,12 +138,19 @@
 	justify-content: center;
 	align-items: center;
 	margin-left: 3rem;
+	border-radius: 0 50% 50% 0;
+	background-color: #818cf8;
+	border: none;
+	z-index: 1;
 }
-
+.header .background {
+	position: absolute;
+	top: 13%;
+	left: 80%;
+}
 .header .headerImageContainer img {
 	width: 100%;
 	height: 100%;
-	border-radius: 12px;
 }
 
 /* Hover Animations */
@@ -289,6 +297,8 @@
 @media screen and (max-width: 1050px) {
 	.header {
 		flex-direction: column;
+		height: fit-content;
+		padding: 1rem;
 	}
 	.content {
 		align-items: center;
@@ -335,12 +345,22 @@
 		line-height: 1.5rem;
 		margin: 0;
 	}
+	.header .background {
+		top: 3%;
+		left: 80%;
+	}
+	.header .headerImageContainer {
+		margin-top: 6rem;
+		margin-left: 0;
+	}
 }
 /* Tablet Devices  - any size below 650px will be affected by this query */
 @media screen and (max-width: 650px) {
 	.header {
 		gap: 3rem;
 		height: fit-content;
+		padding: 1rem;
+		width: 100%;
 	}
 
 	.content h2 div {
@@ -384,6 +404,14 @@
 	}
 	.pageNav {
 		margin-right: 0;
+	}
+	.header .background {
+		top: 6%;
+		left: 80%;
+	}
+	.header .headerImageContainer {
+		margin-top: 1rem;
+		margin-left: 0;
 	}
 }
 
@@ -441,9 +469,12 @@
 		width: 12rem;
 	}
 	.header .headerImageContainer {
-		margin: 0 0 3rem 0;
+		margin: 1rem 0 0 0;
 	}
-
+	.header .background {
+		top: 52%;
+		left: 70%;
+	}
 	.pageNav {
 		display: none;
 	}
@@ -494,7 +525,10 @@
 	.header .headerImageContainer {
 		margin: 0 0 3rem 0;
 	}
-
+	.header .background {
+		top: 65%;
+		left: 70%;
+	}
 	.pageNav {
 		display: none;
 	}

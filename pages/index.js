@@ -9,7 +9,8 @@ import {
 import { CgFormatSlash } from "react-icons/cg";
 import "@animxyz/core";
 
-import Portrait from "../assets/portrait.jpg";
+import Portrait from "../assets/portrait.png";
+import Background from "../assets/background.png";
 
 import styles from "../styles/Home.module.css";
 
@@ -92,6 +93,9 @@ const HomePage = () => {
 						<HiOutlineChevronRight />
 					</div>
 				</Link>
+				<div className={styles.background}>
+					<Image src={Background} alt="shapes background" />
+				</div>
 			</div>
 		)
 	);
