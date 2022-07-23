@@ -200,7 +200,7 @@ const Contact = () => {
 							className={styles.imageContainer + " " + "xyz-in"}
 							xyz="fade flip-right perspective-5 delay-3 duration-2"
 						>
-							<Image src={ContactImagePNG} />
+							<Image src={ContactImagePNG} alt="contact image" />
 						</div>
 						<div className={styles.socials}>
 							<div className={styles.iconContainer}>
