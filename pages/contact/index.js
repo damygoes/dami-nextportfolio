@@ -121,8 +121,8 @@ const Contact = () => {
 						<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
 							{" "}
 							I am interested in and currently looking for new job opportunities.
-							However, if you have any question or request, don't hesitate to contact
-							me using the form below or my social network links.
+							However, if you have any question or request, don&apos;t hesitate to
+							contact me using the form below or my social network links.
 						</p>
 
 						<form className={styles.form} onSubmit={handleSubmit}>
@@ -211,7 +211,7 @@ const Contact = () => {
 										className="xyz-in"
 										xyz="fade front flip-left delay-2 duration-2"
 									>
-										<Image src={Email} />
+										<Image src={Email} alt="Email Logo" />
 									</a>
 								</Link>
 							</div>
@@ -223,7 +223,7 @@ const Contact = () => {
 										className="xyz-in"
 										xyz="fade front flip-left delay-4 duration-2"
 									>
-										<Image src={LinkedIn} />
+										<Image src={LinkedIn} alt="LinkedIn Logo" />
 									</a>
 								</Link>
 							</div>
@@ -235,7 +235,7 @@ const Contact = () => {
 										className="xyz-in"
 										xyz="fade front flip-left delay-6 duration-2"
 									>
-										<Image src={Github} />
+										<Image src={Github} alt="Github Logo" />
 									</a>
 								</Link>
 							</div>
@@ -247,7 +247,7 @@ const Contact = () => {
 										className="xyz-in"
 										xyz="fade front flip-left delay-8 duration-2"
 									>
-										<Image src={Twitter} />
+										<Image src={Twitter} alt="TwitterLogo" />
 									</a>
 								</Link>
 							</div>
@@ -259,7 +259,7 @@ const Contact = () => {
 										className="xyz-in"
 										xyz="fade front flip-left delay-10 duration-2"
 									>
-										<Image src={Instagram} />
+										<Image src={Instagram} alt="Instagram Logo" />
 									</a>
 								</Link>
 							</div>

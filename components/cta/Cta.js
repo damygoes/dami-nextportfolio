@@ -6,7 +6,7 @@ const Cta = () => {
 	return (
 		<div className={styles.cta + " " + "xyz-in"} xyz="fade in delay-6">
 			<div className={styles.text}>
-				<h4>Let's work together</h4>
+				<h4>Let&apos;s work together</h4>
 				<p> I am available for fulltime or freelance work. </p>
 			</div>
 			<div className={styles.buttonContainer}>

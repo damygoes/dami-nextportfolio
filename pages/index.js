@@ -37,8 +37,8 @@ const HomePage = () => {
 					</div>
 					<p className="xyz-in" xyz="fade in-left delay-2 duration-2">
 						I am passionate about using various web development tools to create fun
-						products that solve problems in various industries. Let's connect if
-						you're looking for a creative mind to join your team
+						products that solve problems in various industries. Let&apos;s connect if
+						you&apos;re looking for a creative mind to join your team
 					</p>
 					<div
 						className={styles.cta + " " + "xyz-in"}
