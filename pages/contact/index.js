@@ -10,7 +10,6 @@ import {
 	LinkedIn,
 	Twitter,
 	Instagram,
-	ContactImage,
 	ContactImagePNG,
 } from "./assets";
 
