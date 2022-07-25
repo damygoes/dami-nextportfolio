@@ -68,9 +68,9 @@ const Blog = ({ blogs }) => {
 						I am passionate about <span>solving problems</span>,
 						<span>expanding my knowledge</span> and helping brands make a profit. As a
 						former Marketing Manager, I learned that the most efficient way to grow a
-						brand's influence and profit is by providing a great customer and
+						brand&apos;s influence and profit is by providing a great customer and
 						<span>user experience</span>. With this strategy; and my data analysis
-						skills, I increased my team's profit by 21%.
+						skills, I increased my team&apos;s profit by 21%.
 					</p>
 					<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
 						My <span>determination</span> to provide useful products and solutions
@@ -78,9 +78,9 @@ const Blog = ({ blogs }) => {
 						make a career change to <span>web development</span>.
 					</p>
 					<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
-						When I'm not working, I am either riding my race bike, gracing events as a
-						Disc Jockey (DJ), playing video games or spending time with my wife and
-						daughter.
+						When I&apos;m not working, I am either riding my race bike, gracing events
+						as a Disc Jockey (DJ), playing video games or spending time with my wife
+						and daughter.
 					</p>
 
 					<div className={styles.socials}>
