@@ -40,7 +40,7 @@ const Projects = ({ projects }) => {
 					className={styles.pageNav + " " + "xyz-in"}
 					xyz="fade in-right delay-6 duration-5"
 				>
-					<HiOutlineChevronLeft /> <p>devlog</p> <CgFormatSlash />{" "}
+					<HiOutlineChevronLeft /> <p>aboutMe</p> <CgFormatSlash />{" "}
 					<HiOutlineChevronRight />
 				</div>
 			</Link>

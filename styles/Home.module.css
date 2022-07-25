@@ -53,7 +53,6 @@
 	line-height: 2rem;
 	color: var(--color-text);
 	margin-top: 1rem;
-	/* padding-right: 2rem; */
 	width: 80%;
 }
 
@@ -139,7 +138,7 @@
 	align-items: center;
 	margin-left: 3rem;
 	border-radius: 0 50% 50% 0;
-	background-color: #818cf8;
+	background-color: var(--color-accent);
 	border: none;
 	z-index: 1;
 }

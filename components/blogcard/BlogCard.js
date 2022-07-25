@@ -24,11 +24,11 @@ const BlogCard = ({ blog }) => {
 						/>
 					</div>
 					<div className={styles.blogContent}>
-						<h4> {title} </h4>
-						<p> {description} </p>
+						{/* <h4> {title} </h4>
+						<p> {description} </p> */}
 						<div className={styles.blogTags}>
 							<p>
-								<span>{date}</span>
+								Published: <span>{date}</span>
 							</p>
 							<p>
 								Tag: <span>{tag}</span>

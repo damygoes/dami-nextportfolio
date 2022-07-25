@@ -38,7 +38,7 @@ const Navbar = () => {
 						<Link href="/projects"> Projects </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/blog"> Devlog </Link>
+						<Link href="/blog"> About Me </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
 						<Link href="/contact"> Contact </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
 										setToggleMenu(false);
 									}}
 								>
-									<Link href="/blog"> Devlog </Link>
+									<Link href="/blog"> About Me </Link>
 								</li>
 								<li
 									onClick={() => {

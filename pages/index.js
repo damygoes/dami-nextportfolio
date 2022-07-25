@@ -47,7 +47,6 @@ const HomePage = () => {
 						<Link href="/contact">
 							<a>
 								<div className={styles.ctaButtonContainer}>
-									{" "}
 									<button type="button" className={styles.hvrBuzzOut}>
 										Hire Me
 									</button>
