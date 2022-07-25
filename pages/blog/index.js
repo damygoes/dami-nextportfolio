@@ -153,7 +153,7 @@ const Blog = ({ blogs }) => {
 							src={ME2}
 							alt="Dami's Portrait"
 							className="xyz-in"
-							xyz="fade flip-left perspective-5 delay-5 duration-5"
+							xyz="fade flip-left perspective-5 delay-1 duration-5"
 						/>
 					</div>
 					<div className={styles.card}>
@@ -161,7 +161,7 @@ const Blog = ({ blogs }) => {
 							src={ME1}
 							alt="Dami's Portrait"
 							className="xyz-in"
-							xyz="fade flip-left perspective-5 delay-7 duration-5"
+							xyz="fade flip-left perspective-5 delay-3 duration-5"
 						/>
 					</div>
 					<div className={styles.card}>
@@ -169,7 +169,7 @@ const Blog = ({ blogs }) => {
 							src={ME5}
 							alt="Dami's Portrait"
 							className="xyz-in"
-							xyz="fade flip-right perspective-5 delay-11 duration-5"
+							xyz="fade flip-right perspective-5 delay-7 duration-5"
 						/>
 					</div>
 					<div className={styles.card}>
@@ -177,7 +177,7 @@ const Blog = ({ blogs }) => {
 							src={ME3}
 							alt="Dami's Portrait"
 							className="xyz-in"
-							xyz="fade flip-left perspective-5 delay-9 duration-5"
+							xyz="fade flip-left perspective-5 delay-5 duration-5"
 						/>
 					</div>
 				</div>
@@ -239,7 +239,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			blogs: blogs.items,
-			revalidate: 10,
+			revalidate: 1,
 			// blogs: blogs.map((blog) => ({
 			// 	title: blog.title,
 			// 	description: blog.description,
