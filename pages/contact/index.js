@@ -4,14 +4,21 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import "@animxyz/core";
 
-import {
-	Github,
-	Email,
-	LinkedIn,
-	Twitter,
-	Instagram,
-	ContactImagePNG,
-} from "./assets";
+// import {
+// 	Github,
+// 	Email,
+// 	LinkedIn,
+// 	Twitter,
+// 	Instagram,
+// 	ContactImagePNG,
+// } from "./assets";
+import LinkedIn from "../../assets/linkedin-app.svg";
+import Email from "../../assets/email-address.svg";
+import Twitter from "../../assets/twitter-app.svg";
+import Instagram from "../../assets/ig-instagram.svg";
+import Github from "../../assets/github.svg";
+import ContactImage from "../../assets/contact-image.jpg";
+import ContactImagePNG from "../../assets/contact-png.png";
 
 import styles from "./Contact.module.css";
 

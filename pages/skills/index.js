@@ -4,16 +4,24 @@ import "@animxyz/core";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 import { CgFormatSlash } from "react-icons/cg";
 import Cta from "../../components/cta/Cta";
-import {
-	Bootstrap,
-	Expressjs,
-	Github,
-	Mongodb,
-	Nodejs,
-	Reactjs,
-	VSCode,
-	Nextjs,
-} from "./assets";
+// import {
+// 	Bootstrap,
+// 	Expressjs,
+// 	Github,
+// 	Mongodb,
+// 	Nodejs,
+// 	Reactjs,
+// 	VSCode,
+// 	Nextjs,
+// } from "./assets";
+import Bootstrap from "../../assets/bootstrap-5-logo.svg";
+import Expressjs from "../../assets/expressjs.svg";
+import Github from "../../assets/github.svg";
+import Mongodb from "../../assets/mongodb.svg";
+import Nodejs from "../../assets/node-js.svg";
+import Reactjs from "../../assets/react-js.svg";
+import VSCode from "../../assets/visual-studio-code.svg";
+import Nextjs from "../../assets/nextjs.svg";
 
 import styles from "./Skills.module.css";
 

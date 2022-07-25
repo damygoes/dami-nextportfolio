@@ -9,17 +9,30 @@ import { motion } from "framer-motion";
 
 import BlogCard from "../../components/blogcard/BlogCard";
 
-import {
-	Github,
-	LinkedIn,
-	Twitter,
-	Instagram,
-	ME1,
-	ME2,
-	ME3,
-	ME4,
-	ME5,
-} from "./assets";
+// import {
+// 	Github,
+// 	LinkedIn,
+// 	Twitter,
+// 	Instagram,
+// 	ME1,
+// 	ME2,
+// 	ME3,
+// 	ME4,
+// 	ME5,
+// } from "./assets";
+import LinkedIn from "../../assets/linkedin-app.svg";
+import Email from "../../assets/email-address.svg";
+import Twitter from "../../assets/twitter-app.svg";
+import Instagram from "../../assets/ig-instagram.svg";
+import Github from "../../assets/github.svg";
+import ContactImage from "../../assets/contact-image.jpg";
+import ContactImagePNG from "../../assets/contact-png.png";
+import ME1 from "../../assets/me1.jpg";
+import ME2 from "../../assets/me2.jpg";
+import ME3 from "../../assets/me3.jpg";
+import ME4 from "../../assets/me4.jpg";
+import ME5 from "../../assets/me5.jpg";
+
 import Portrait from "../../assets/portrait.png";
 import styles from "./Blog.module.css";
 

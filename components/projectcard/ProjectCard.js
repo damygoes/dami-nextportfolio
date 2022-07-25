@@ -21,10 +21,9 @@ const ProjectCard = ({ projects }) => {
 		<>
 			{projects.map((project) => {
 				return project.isDone ? (
-					<Link href={`projects/${project.id}`}>
+					<Link href={`projects/${project.id}`} key={project.id}>
 						<div
 							className={styles.projectCard + " " + "xyz-in"}
-							key={project.id}
 							xyz="fade front flip-left delay-2 duration-2 stagger"
 						>
 							<div className={styles.imageContainer}>
