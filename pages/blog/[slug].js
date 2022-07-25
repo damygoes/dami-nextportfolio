@@ -153,7 +153,7 @@ const client = createClient({
 
 // We need to be able to access the blogID fron the Url path and we could use useRouter to fetch the blog id from the url path and match it to the blog id from the data on order to get details for a particular blog post using it's id. However, useRoute hook or generally react hooks cannot and does not work within the getStaticProps code block, therefore this is not an option. Instead, we use the "context" method which we can use to assess params for our url
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
 	// fetch blog slug from url path
 	// const slug = context.params.slug; //this can be simplified by destructuring params from context and passing params into getStaticProps instead of context.
 
@@ -180,7 +180,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			blog: items[0],
-			revalidate: 1,
+
 			// blog: {
 			// 	//we don't need to use .map here because we are fetching only one blog post. We only need to return all the properties related to a blog post and convert _id back to string
 			// 	// id: blog._id.toString(),
@@ -200,20 +200,20 @@ export async function getStaticProps({ params }) {
 }
 
 // this helps dynamically fetch details for one blog post. However, we need to specify all possible paths in the paths array, as well as a fallback option. If fallback = true, that means not all possible paths are added/considered and if the client visits any path that is not in the array, the server will try to automatically generate content for such path. However, if fallback = false, that means all possible paths are defined/registered in our paths array and if the client visits any route/path that is not defined in the array, the server will return a 404 error.
-export async function getStaticPaths() {
-	// connecting to our MongoDB database to fetch data
+// export async function getStaticPaths() {
+// 	// connecting to our MongoDB database to fetch data
 
-	const blogs = await client.getEntries({ content_type: "blog" });
-	console.log(blogs);
+// 	const blogs = await client.getEntries({ content_type: "blog" });
+// 	console.log(blogs);
 
-	return {
-		paths: blogs.items.map((blog) => ({
-			params: {
-				slug: blog.fields.slug,
-			},
-		})),
-		fallback: "blocking",
-	};
-}
+// 	return {
+// 		paths: blogs.items.map((blog) => ({
+// 			params: {
+// 				slug: blog.fields.slug,
+// 			},
+// 		})),
+// 		fallback: "blocking",
+// 	};
+// }
 
 export default BlogPost;

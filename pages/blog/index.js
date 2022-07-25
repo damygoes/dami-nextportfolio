@@ -239,7 +239,7 @@ export async function getServerSideProps() {
 	return {
 		props: {
 			blogs: blogs.items,
-			revalidate: 1,
+
 			// blogs: blogs.map((blog) => ({
 			// 	title: blog.title,
 			// 	description: blog.description,
