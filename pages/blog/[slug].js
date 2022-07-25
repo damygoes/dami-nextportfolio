@@ -206,12 +206,12 @@ export async function getStaticPaths() {
 	console.log(blogs);
 
 	return {
-		fallback: false,
 		paths: blogs.items.map((blog) => ({
 			params: {
 				slug: blog.fields.slug,
 			},
 		})),
+		fallback: "blocking",
 	};
 }
 

@@ -91,11 +91,11 @@ const Navbar = () => {
 								</li>
 							</ul>
 
-							<div className={styles.buttonContainer}>
+							{/* <div className={styles.buttonContainer}>
 								<Link href="/contact">
 									<button> Hire Me </button>
 								</Link>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				)}

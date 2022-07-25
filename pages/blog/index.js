@@ -44,8 +44,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 const Blog = ({ blogs }) => {
-	const [width, setWidth] = useState(0);
-	const carouselContainer = useRef();
+	// const [width, setWidth] = useState(0);
+	// const carouselContainer = useRef();
 
 	// useEffect(() => {
 	// 	// console.log(
@@ -239,6 +239,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			blogs: blogs.items,
+			revalidate: 10,
 			// blogs: blogs.map((blog) => ({
 			// 	title: blog.title,
 			// 	description: blog.description,
