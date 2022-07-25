@@ -216,7 +216,7 @@ const Blog = ({ blogs }) => {
 	);
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	// connecting to our MongoDB database to fetch data
 	// const client = await MongoClient.connect(
 	// 	`mongodb+srv://damygoes:${process.env.DB_PASSWORD}@cluster0.nf34c.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
