@@ -180,6 +180,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			blog: items[0],
+			revalidate: 10,
 			// blog: {
 			// 	//we don't need to use .map here because we are fetching only one blog post. We only need to return all the properties related to a blog post and convert _id back to string
 			// 	// id: blog._id.toString(),
