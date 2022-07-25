@@ -69,7 +69,7 @@ const BlogPost = ({ blog }) => {
 			[BLOCKS.EMBEDDED_ASSET]: (node, children) => {
 				// render the EMBEDDED_ASSET as you need
 				return (
-					<img
+					<Image
 						src={`https://${node.data.target.fields.file.url}`}
 						height={node.data.target.fields.file.details.image.height}
 						width={node.data.target.fields.file.details.image.width}
