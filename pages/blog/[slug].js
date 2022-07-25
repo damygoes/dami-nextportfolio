@@ -28,17 +28,6 @@ const BlogPost = ({ blog }) => {
 	// Embedding Contentful
 	const renderOptions = {
 		renderNode: {
-			// [INLINES.EMBEDDED_ENTRY]: (node, children) => {
-			// 	// target the contentType of the EMBEDDED_ENTRY to display as you need
-			// 	if (node.data.target.sys.contentType.sys.id === "blogPost") {
-			// 		return (
-			// 			<a href={`/blog/${node.data.target.fields.slug}`}>
-			// 				{" "}
-			// 				{node.data.target.fields.title}
-			// 			</a>
-			// 		);
-			// 	}
-			// },
 			[BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
 				// target the contentType of the EMBEDDED_ENTRY to display as you need
 				if (node.data.target.sys.contentType.sys.id === "codeBlock") {
