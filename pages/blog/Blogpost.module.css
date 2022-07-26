@@ -231,11 +231,11 @@
 }
 
 .bottom article pre {
-	margin: 3rem;
+	margin: 1rem;
 }
 .bottom article code {
-	font-size: 1.2rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
 }
 .bottom article a {
 	color: var(--color-subtext);

@@ -68,6 +68,7 @@ export async function getStaticProps() {
 				isDone: project.isDone,
 				deployed: project.deployed,
 				github: project.github,
+				slug: project.slug,
 				id: project._id.toString(),
 			})),
 		},
