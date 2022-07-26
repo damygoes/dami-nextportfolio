@@ -1,7 +1,4 @@
-/* ################### */
-/* ## BLOG SECTION ## */
-/* ################## */
-.blog {
+.aboutMe {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -10,35 +7,134 @@
 	margin-top: 6rem;
 	position: relative;
 }
-.bloghead {
+.aboutMe .title {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	width: 100%;
 	margin-bottom: 3rem;
+	/* border: 1px solid green; */
 }
-.bloghead h3 {
+.aboutMe .title h3 {
 	font-weight: 600;
 	font-size: 3rem;
 	line-height: 3rem;
 	text-align: center;
 	color: var(--color-text);
 }
-.bloghead div {
+.aboutMe .title div {
 	width: 12rem;
 	height: 0;
 	margin-left: 2rem;
 	background-color: var(--color-subtext);
 	border: 1px solid var(--color-button);
 }
-.blogbody {
+.upper {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+.upper .left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: flex-start;
-	width: 100%;
-	gap: 0.5rem;
+	gap: 2rem;
+	/* max-width: 50%; */
+	flex: 1;
+	padding: 2rem;
+	/* border: 1px solid red; */
+}
+.left p {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	text-align: left;
+	color: var(--color-text);
+}
+.left p span {
+	color: var(--color-subtext);
+	margin-left: 0.3rem;
+}
+.left p:nth-child(3) span {
+	margin: 0 0.5rem;
+}
+.socials {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 	flex-wrap: wrap;
-	margin-bottom: 3rem;
+	margin-top: 2rem;
+	gap: 1.5rem;
+	width: 100%;
+}
+.socials p {
+	font-size: 1rem;
+	font-style: italic;
+	text-transform: capitalize;
+	color: var(--color-subtext);
+}
+.iconContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+}
+.iconContainer img {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	transition: 400ms all ease-in-out;
+}
+.iconContainer img:hover {
+	transform: scale(2);
+}
+.upper .right img {
+	width: 100%;
+	height: 100%;
+	/* border-radius: 50px; */
+}
+.upper .right {
+	display: grid;
+	place-items: top;
+	grid-template-columns: repeat(9, 1fr);
+	/* grid-template-rows: repeat(4, 1fr); */
+	grid-gap: 1rem;
+	flex: 1;
+	margin: 0rem 1rem 3rem 5rem;
+	/* border: 1px solid green; */
+}
+.upper .right .card {
+	/* width: 300px; */
+	height: fit-content;
+	/* border: 1px solid red; */
+}
+.upper .right .card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.upper .right .card:nth-child(2) img {
+	border-radius: 0 50% 50% 0;
+	background-color: var(--color-accent);
+	border: none;
+}
+.card:nth-child(1),
+.card:nth-child(3),
+.card:nth-child(4) {
+	grid-column: span 2;
+	/* border: 1px solid red; */
+}
+.card:nth-child(2),
+.card:nth-child(5) {
+	grid-column: span 6;
+	grid-row: span 3;
+}
+.card:nth-child(1) {
+	background-color: var(--color-);
+	border-radius: 5px;
 }
 
 /* Bottom Forward Nav */
@@ -103,10 +199,6 @@
 	font-style: italic;
 }
 
-.main {
-	width: 500px;
-}
-
 /* Media Queries */
 /* Larger Devices  - any size below 1050px will be affected by this query */
 @media screen and (max-width: 1050px) {
@@ -140,14 +232,6 @@
 		margin-top: 2rem;
 		gap: 1rem;
 	}
-	.bloghead h4 {
-		font-size: 1.8rem;
-		line-height: 2rem;
-		margin-right: 3rem;
-	}
-	.bloghead div {
-		width: 10rem;
-	}
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
@@ -176,22 +260,6 @@
 	.socials p {
 		font-size: 0.8rem;
 	}
-	.bloghead {
-		flex-direction: column;
-		margin: 0;
-	}
-	.bloghead h4 {
-		line-height: 2rem;
-		margin: 0 0 0.8rem 0;
-	}
-	.bloghead div {
-		width: 5rem;
-		margin-left: 2rem;
-		margin-bottom: 1rem;
-	}
-	.blogbody {
-		margin-bottom: 3rem;
-	}
 	.pageNav,
 	.pageBackNav {
 		display: none;
@@ -217,17 +285,6 @@
 	}
 	.upper .right {
 		margin: 0rem 0rem 0rem 2rem;
-	}
-	.bloghead h4 {
-		margin: 0 0 0.8rem 0;
-		line-height: 2rem;
-	}
-	.bloghead div {
-		margin-left: 2rem;
-	}
-	.blogbody {
-		padding: 0 1rem;
-		/* margin-bottom: 3rem; */
 	}
 	.pageNav,
 	.pageBackNav {

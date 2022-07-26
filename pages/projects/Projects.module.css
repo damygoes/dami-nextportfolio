@@ -1,3 +1,222 @@
+/* ################################################# */
+/* ###############  MAIN CONTAINER  ################ */
+/* ################################################# */
+
+/* ################################################# */
+/* ###############  SKILLS  ####################### */
+/* ################################################# */
+.skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 2rem;
+	margin-top: 6rem;
+	padding: 1rem;
+	position: relative;
+}
+
+.title p {
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1rem;
+	margin: 0 0 2rem 0;
+	text-align: left;
+	color: var(--color-text);
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	margin-bottom: 1rem;
+	/* gap: 1rem; */
+}
+
+.contentCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.contentCard h4 {
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	margin-bottom: 0rem;
+}
+
+.cardGroup {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+}
+
+.cardGroup div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 15px;
+	border: none;
+	background-color: var(--color-bg);
+	width: 8rem;
+	height: 7rem;
+}
+
+.cardGroup div p {
+	font-weight: 300;
+	font-size: 0.8rem;
+	line-height: 2rem;
+}
+/* Bottom Forward Nav */
+.pageNav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 2rem 1rem 2rem 0;
+	color: var(--color-subtext);
+	cursor: pointer;
+}
+.pageNav svg:first-child,
+.pageNav svg:last-child {
+	font-size: 0.8rem;
+}
+.pageNav svg:last-child {
+	margin-left: -0.7rem;
+}
+.pageNav svg:nth-child(3) {
+	font-size: 1.5rem;
+	margin-right: 0;
+	margin-left: -0.2rem;
+	font-weight: 100;
+}
+.pageNav p {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* Bottom Backward Nav */
+.pageBackNav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 2rem 0rem 2rem 1rem;
+	color: var(--color-subtext);
+	cursor: pointer;
+}
+.pageBackNav svg:first-child,
+.pageBackNav svg:last-child {
+	font-size: 0.8rem;
+}
+.pageBackNav svg:last-child {
+	margin-left: -0.7rem;
+}
+.pageBackNav svg:nth-child(3) {
+	font-size: 1.5rem;
+	margin-right: 0;
+	margin-left: -0.2rem;
+	font-weight: 100;
+}
+.pageBackNav p {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* Media Queries */
+/* Larger Devices  - any size below 1050px will be affected by this query */
+@media screen and (max-width: 1050px) {
+	.skills {
+		gap: 4rem;
+		margin-top: 1rem;
+		padding: 2rem;
+	}
+
+	.title p {
+		font-size: 1.2rem;
+	}
+
+	.contentCard h4 {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+}
+
+/* Tablet Devices  - any size below 650px will be affected by this query */
+@media screen and (max-width: 650px) {
+	.content {
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.title p {
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
+
+	/* .contentCard {
+		border: 1px solid var(--color-text-accent);
+		border-radius: 12px;
+	} */
+	.cardGroup div {
+		width: 7rem;
+		height: 7rem;
+	}
+
+	.contentCard h4 {
+		border-bottom: 1px solid var(--color-text-accent);
+		margin-top: 1rem;
+	}
+	.pageNav {
+		margin-right: 0;
+	}
+	.pageBackNav {
+		margin-left: 0;
+	}
+}
+/* Mobile Devices  - any size below 490px will be affected by this query */
+@media screen and (max-width: 490px) {
+	.title p {
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 1rem 0;
+	}
+	.cardGroup div {
+		width: 7rem;
+		height: 7rem;
+	}
+	.pageNav,
+	.pageBackNav {
+		display: none;
+	}
+}
+@media screen and (max-width: 280px) {
+	.title p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}
+
+/* ################################################# */
+/* ###############  PROJECTS  ####################### */
+/* ################################################# */
 .projects {
 	display: flex;
 	flex-direction: column;
@@ -13,7 +232,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	width: 100%;
-	margin-bottom: 5rem;
+	margin: 6rem 0 3rem 0;
 }
 
 .head h3 {
@@ -108,21 +327,35 @@
 }
 /* Tablet Devices  - any size below 650px will be affected by this query */
 @media screen and (max-width: 650px) {
+	.head h3 {
+		font-size: 2.5rem;
+		line-height: 2.8rem;
+		text-align: left;
+	}
+	.head div {
+		/* width: 12rem; */
+		/* height: 0; */
+		margin-right: 8rem;
+		background-color: var(--color-subtext);
+		border: 1px solid var(--color-button);
+	}
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
 @media screen and (max-width: 490px) {
 	.head {
 		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1.5rem;
 	}
 
 	.head h3 {
-		font-size: 2rem;
+		font-size: 2.2rem;
 		margin-bottom: 1rem;
 	}
 
 	.head div {
 		width: 8rem;
-		margin-left: 0;
+		margin: 0;
 	}
 	.pageNav,
 	.pageBackNav {
@@ -134,8 +367,8 @@
 		margin-bottom: 1rem;
 	}
 	.head h3 {
-		font-size: 2rem;
-		line-height: 2rem;
+		font-size: 1.5rem;
+		line-height: 1rem;
 	}
 	.head div {
 		width: 8rem;

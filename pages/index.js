@@ -83,12 +83,12 @@ const HomePage = () => {
 				>
 					<Image src={Portrait} alt="Dami's Portrait" />
 				</div>
-				<Link href={"/skills"}>
+				<Link href={"/projects"}>
 					<div
 						className={styles.pageNav + " " + "xyz-in"}
 						xyz="fade in-right delay-6 duration-5"
 					>
-						<HiOutlineChevronLeft /> <p>skills</p> <CgFormatSlash />{" "}
+						<HiOutlineChevronLeft /> <p>portfolio</p> <CgFormatSlash />{" "}
 						<HiOutlineChevronRight />
 					</div>
 				</Link>

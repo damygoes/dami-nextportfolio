@@ -32,16 +32,13 @@ const Navbar = () => {
 			<nav>
 				<ul>
 					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/skills"> Skills </Link>
+						<Link href="/projects"> Portfolio </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/projects"> Projects </Link>
+						<Link href="/aboutMe"> About Me </Link>
 					</li>
 					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/blog"> About Me </Link>
-					</li>
-					<li className={styles.hvrUnderlineFromLeft}>
-						<Link href="/contact"> Contact </Link>
+						<Link href="/blog"> Blog </Link>
 					</li>
 				</ul>
 
@@ -66,28 +63,21 @@ const Navbar = () => {
 										setToggleMenu(false);
 									}}
 								>
-									<Link href="/skills"> Skills </Link>
+									<Link href="/projects"> Portfolio </Link>
 								</li>
 								<li
 									onClick={() => {
 										setToggleMenu(false);
 									}}
 								>
-									<Link href="/projects"> Projects </Link>
+									<Link href="/aboutMe"> About Me </Link>
 								</li>
 								<li
 									onClick={() => {
 										setToggleMenu(false);
 									}}
 								>
-									<Link href="/blog"> About Me </Link>
-								</li>
-								<li
-									onClick={() => {
-										setToggleMenu(false);
-									}}
-								>
-									<Link href="/contact"> Contact </Link>
+									<Link href="/blog"> Blog </Link>
 								</li>
 							</ul>
 

@@ -21,11 +21,11 @@ const ProjectCard = ({ projects }) => {
 		<>
 			{projects.map((project) => {
 				return project.isDone ? (
-					<Link href={`projects/${project.id}`} key={project.id}>
-						<div
-							className={styles.projectCard + " " + "xyz-in"}
-							xyz="fade front flip-left delay-2 duration-2 stagger"
-						>
+					<div
+						className={styles.projectCard + " " + "xyz-in"}
+						xyz="fade front flip-left delay-2 duration-2 stagger"
+					>
+						<Link href={`projects/${project.id}`} key={project.id}>
 							<div className={styles.imageContainer}>
 								<Image
 									src={project.image}
@@ -34,43 +34,50 @@ const ProjectCard = ({ projects }) => {
 									objectFit="fill"
 								/>
 							</div>
-							<div className={styles.projectContent}>
-								<h4> {project.title} </h4>
-								<p> {project.description} </p>
-								{/* <div className={styles.projectLinks}>
-									<Link href={project.deployed}>
-										<a target="_blank" rel="noreferrer">
-											{" "}
-											<HiOutlineEye />
-										</a>
-									</Link>
-									<Link href={project.github}>
-										<a target="_blank" rel="noreferrer">
-											{" "}
-											<GrGithub />
-										</a>
-									</Link>
-								</div> */}
+						</Link>
+						<div className={styles.projectContent}>
+							<h4> {project.title} </h4>
+							<p> {project.description} </p>
+							<p className={styles.tools}>
+								Tools: <span>{project.tech}</span>
+							</p>
+							<div className={styles.projectLinks}>
+								<Link href={project.deployed}>
+									<a target="_blank" rel="noreferrer">
+										{" "}
+										<HiOutlineEye />
+									</a>
+								</Link>
+								<Link href={project.github}>
+									<a target="_blank" rel="noreferrer">
+										{" "}
+										<GrGithub />
+									</a>
+								</Link>
 							</div>
 						</div>
-					</Link>
+					</div>
 				) : (
 					<div
 						className={styles.comingSoon + " " + "xyz-in"}
-						key={project.id}
-						xyz="fade front flip-left delay-2 duration-2"
+						xyz="fade front flip-left delay-2 duration-2 stagger"
 					>
-						<div className={styles.imageContainer}>
-							<Image
-								src={project.image}
-								alt={project.title}
-								width={300}
-								height={300}
-							/>
-						</div>
+						<Link href={`projects/${project.id}`} key={project.id}>
+							<div className={styles.imageContainer}>
+								<Image
+									src={project.image}
+									alt={project.title}
+									layout="fill"
+									objectFit="fill"
+								/>
+							</div>
+						</Link>
 						<div className={styles.projectContent}>
 							<h4> {project.title} </h4>
-							{/* <p> {project.description} </p> */}
+							<p> {project.description} </p>
+							<p className={styles.tools}>
+								Tools: <span>{project.tech}</span>
+							</p>
 							<div className={styles.projectLinks}>
 								<Link href={project.deployed}>
 									<a target="_blank" rel="noreferrer">
