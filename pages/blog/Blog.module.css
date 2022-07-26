@@ -49,16 +49,15 @@
 .left p {
 	font-size: 1.2rem;
 	line-height: 2rem;
-	text-align: justify;
+	text-align: left;
 	color: var(--color-text);
 }
 .left p span {
 	color: var(--color-subtext);
-}
-.left p span:nth-child(2),
-.left p span:nth-child(3),
-.left p span:nth-child(4) {
 	margin-left: 0.3rem;
+}
+.left p:nth-child(3) span {
+	margin: 0 0.5rem;
 }
 .socials {
 	display: flex;

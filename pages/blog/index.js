@@ -75,17 +75,20 @@ const Blog = ({ blogs }) => {
 						problems.
 					</p>
 					<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
-						I am passionate about <span>solving problems</span>,
-						<span>expanding my knowledge</span> and helping brands make a profit. As a
-						former Marketing Manager, I learned that the most efficient way to grow a
-						brand&apos;s influence and profit is by providing a great customer and
-						<span>user experience</span>. With this strategy; and my data analysis
-						skills, I increased my team&apos;s profit by 21%.
+						As a former Marketing Manager, I learned that the most efficient way to
+						grow a brand&apos;s influence and profit is by providing a great customer
+						and <span>user experience</span>. With this strategy; combined with my
+						data analysis skills, I increased my team&apos;s profit by 21%. My
+						continued interest in <span>delivering top-notch user experience</span>,
+						and my <span>passion for learning and development</span>, led me to pursue
+						<span>web development</span> as a career.
 					</p>
 					<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
-						My <span>determination</span> to provide useful products and solutions
-						that will help businesses grow a strong yet profitable brand led me to
-						make a career change to <span>web development</span>.
+						I have a great passion for building
+						<span>mordern, creative and dynamic</span>
+						websites, applications and products for the web. I also enjoy the
+						challenge of <span>learning and working with different technologies</span>
+						because, there is no one tool that fits all situation.
 					</p>
 					<p className="xyz-in" xyz="fade in-left delay-1 duration-2">
 						When I&apos;m not working, I am either riding my race bike, gracing events
