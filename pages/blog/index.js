@@ -233,7 +233,10 @@ export async function getServerSideProps() {
 		accessToken: process.env.CONTENT_DELIVERY_API_TOKEN,
 	});
 
-	const blogs = await client.getEntries({ content_type: "blog" });
+	const blogs = await client.getEntries({
+		content_type: "blog",
+		order: "-sys.createdAt",
+	});
 	// console.log(blogs);
 
 	return {
