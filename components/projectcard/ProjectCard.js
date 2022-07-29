@@ -25,33 +25,35 @@ const ProjectCard = ({ projects }) => {
 						className={styles.projectCard + " " + "xyz-in"}
 						xyz="fade front flip-left delay-2 duration-2 stagger"
 					>
-						<Link href={`projects/${project.id}`} key={project.id}>
-							<div className={styles.imageContainer}>
-								<Image
-									src={project.image}
-									alt={project.title}
-									layout="fill"
-									objectFit="fill"
-								/>
-							</div>
-						</Link>
+						<div className={styles.imageContainer}>
+							<Image
+								src={project.image}
+								alt={project.title}
+								layout="fill"
+								objectFit="fill"
+							/>
+						</div>
+
 						<div className={styles.projectContent}>
 							<h4> {project.title} </h4>
 							<p> {project.description} </p>
 							<p className={styles.tools}>
 								Tools: <span>{project.tech}</span>
 							</p>
+							<Link href={`projects/${project.id}`} key={project.id}>
+								<p className={styles.readMore}>read more</p>
+							</Link>
 							<div className={styles.projectLinks}>
 								<Link href={project.deployed}>
 									<a target="_blank" rel="noreferrer">
-										{" "}
 										<HiOutlineEye />
+										{/* <span className={styles.toolTipDemo}> demo</span> */}
 									</a>
 								</Link>
 								<Link href={project.github}>
 									<a target="_blank" rel="noreferrer">
-										{" "}
 										<GrGithub />
+										{/* <span className={styles.toolTipCode}> code</span> */}
 									</a>
 								</Link>
 							</div>
@@ -81,13 +83,11 @@ const ProjectCard = ({ projects }) => {
 							<div className={styles.projectLinks}>
 								<Link href={project.deployed}>
 									<a target="_blank" rel="noreferrer">
-										{" "}
 										<HiOutlineEye />
 									</a>
 								</Link>
 								<Link href={project.github}>
 									<a target="_blank" rel="noreferrer">
-										{" "}
 										<GrGithub />
 									</a>
 								</Link>
