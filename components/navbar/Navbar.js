@@ -59,6 +59,7 @@ const Navbar = () => {
 						<div>
 							<ul>
 								<li
+									className={styles.hvrUnderlineFromLeft}
 									onClick={() => {
 										setToggleMenu(false);
 									}}
@@ -66,6 +67,7 @@ const Navbar = () => {
 									<Link href="/projects"> Portfolio </Link>
 								</li>
 								<li
+									className={styles.hvrUnderlineFromLeft}
 									onClick={() => {
 										setToggleMenu(false);
 									}}
@@ -73,6 +75,7 @@ const Navbar = () => {
 									<Link href="/aboutMe"> About Me </Link>
 								</li>
 								<li
+									className={styles.hvrUnderlineFromLeft}
 									onClick={() => {
 										setToggleMenu(false);
 									}}
@@ -81,11 +84,16 @@ const Navbar = () => {
 								</li>
 							</ul>
 
-							{/* <div className={styles.buttonContainer}>
+							<div
+								className={styles.buttonContainer}
+								onClick={() => {
+									setToggleMenu(false);
+								}}
+							>
 								<Link href="/contact">
-									<button> Hire Me </button>
+									<button className={styles.hvrSweepToRight}> Hire Me </button>
 								</Link>
-							</div> */}
+							</div>
 						</div>
 					</div>
 				)}

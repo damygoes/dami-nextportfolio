@@ -143,6 +143,7 @@
 	line-height: 2rem;
 	text-transform: capitalize;
 	margin: 1rem 0;
+	padding-bottom: 0.5rem;
 	cursor: pointer;
 }
 

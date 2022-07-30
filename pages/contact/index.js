@@ -101,9 +101,10 @@ const Contact = () => {
 			setShowFailureMessage(false);
 			setButtonText("Send");
 
-			// setEmail(" ");
-			// setSubject(" ");
-			// setMessage(" ");
+			setName("");
+			setEmail("");
+			setSubject("");
+			setMessage("");
 			setTimeout(() => {
 				router.push("/");
 			}, 1500);
@@ -137,6 +138,7 @@ const Contact = () => {
 										type="text"
 										name="name"
 										placeholder="Name"
+										value={name}
 										required
 										onChange={(e) => {
 											setName(e.target.value);
@@ -151,6 +153,7 @@ const Contact = () => {
 										type="text"
 										name="email"
 										placeholder="Email"
+										value={email}
 										required
 										onChange={(e) => {
 											setEmail(e.target.value);
@@ -164,6 +167,7 @@ const Contact = () => {
 										type="text"
 										name="subject"
 										placeholder="Subject"
+										value={subject}
 										required
 										onChange={(e) => {
 											setSubject(e.target.value);
@@ -176,6 +180,7 @@ const Contact = () => {
 									<textarea
 										placeholder="Message"
 										name="message"
+										value={message}
 										required
 										onChange={(e) => {
 											setMessage(e.target.value);
