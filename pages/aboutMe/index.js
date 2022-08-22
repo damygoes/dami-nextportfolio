@@ -156,7 +156,7 @@ const Aboutme = () => {
 					<HiOutlineChevronRight />
 				</div>
 			</Link>
-			<Link href={"/blog"}>
+			{/* <Link href={"/blog"}>
 				<div
 					className={styles.pageNav + " " + "xyz-in"}
 					xyz="fade in-right delay-6 duration-5"
@@ -164,7 +164,7 @@ const Aboutme = () => {
 					<HiOutlineChevronLeft /> <p>blog</p> <CgFormatSlash />{" "}
 					<HiOutlineChevronRight />
 				</div>
-			</Link>
+			</Link> */}
 		</section>
 	);
 };

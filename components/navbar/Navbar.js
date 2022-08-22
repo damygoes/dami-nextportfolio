@@ -37,9 +37,9 @@ const Navbar = () => {
 					<li className={styles.hvrUnderlineFromLeft}>
 						<Link href="/aboutMe"> About Me </Link>
 					</li>
-					<li className={styles.hvrUnderlineFromLeft}>
+					{/* <li className={styles.hvrUnderlineFromLeft}>
 						<Link href="/blog"> Blog </Link>
-					</li>
+					</li> */}
 				</ul>
 
 				<div className={styles.buttonContainer}>
@@ -74,14 +74,14 @@ const Navbar = () => {
 								>
 									<Link href="/aboutMe"> About Me </Link>
 								</li>
-								<li
+								{/* <li
 									className={styles.hvrUnderlineFromLeft}
 									onClick={() => {
 										setToggleMenu(false);
 									}}
 								>
 									<Link href="/blog"> Blog </Link>
-								</li>
+								</li> */}
 							</ul>
 
 							<div
