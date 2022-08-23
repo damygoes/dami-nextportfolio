@@ -272,7 +272,7 @@
 	}
 
 	.mobileLinks {
-		top: 3rem;
+		top: 2rem;
 		right: -259%;
 		margin-top: 1.2rem;
 		width: 100vw;
@@ -293,7 +293,6 @@
 		padding: 2rem 4rem;
 	}
 	.mobileLinks {
-		top: 3rem;
 		right: -172%;
 		margin-top: 1.2rem;
 		width: 100vw;
@@ -314,7 +313,6 @@
 		display: none;
 	}
 	.mobileLinks {
-		top: 3rem;
 		right: -87%;
 		margin-top: 1.2rem;
 		width: 100vw;

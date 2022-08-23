@@ -13,7 +13,6 @@
 	justify-content: flex-start;
 	width: 100%;
 	margin-bottom: 3rem;
-	/* border: 1px solid green; */
 }
 .aboutMe .title h3 {
 	font-weight: 600;
@@ -29,35 +28,65 @@
 	background-color: var(--color-subtext);
 	border: 1px solid var(--color-button);
 }
-.upper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* border: 1px solid red; */
-}
-.upper .left {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
+.main {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 	gap: 2rem;
-	/* max-width: 50%; */
-	flex: 1;
-	padding: 2rem;
-	/* border: 1px solid red; */
+	grid-auto-flow: row;
 }
-.left p {
-	font-size: 1.2rem;
+
+.text {
+	font-size: 1.1rem;
 	line-height: 2rem;
-	text-align: left;
-	color: var(--color-text);
+	font-weight: 300;
+	z-index: 99;
 }
-.left p span {
-	color: var(--color-subtext);
-	margin-left: 0.3rem;
+.content {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: grid;
+	place-content: center;
+	gap: 2rem;
 }
-.left p:nth-child(3) span {
-	margin: 0 0.5rem;
+.portraitOne {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	position: relative;
+	width: 100%;
+}
+.portraitOne img {
+	width: 100%;
+	height: 100%;
+	transform: scaleX(-1);
+	filter: drop-shadow(3px 3px 6px var(--color-text));
+	border-bottom-right-radius: 25%;
+}
+
+.discoveryText {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	place-self: start;
+}
+.portraitTwo {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	width: 400px;
+	height: 500px;
+	position: relative;
+}
+.portraitTwo img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0 50% 50% 0;
+}
+.goalText {
+	grid-row-start: 2;
+	grid-column-start: 5;
+	grid-column-end: 7;
+
+	place-self: end;
+	text-align: right;
 }
 .socials {
 	display: flex;
@@ -65,6 +94,7 @@
 	align-items: flex-end;
 	flex-wrap: wrap;
 	margin-top: 2rem;
+	margin-bottom: 4rem;
 	gap: 1.5rem;
 	width: 100%;
 }
@@ -95,50 +125,8 @@
 	height: 100%;
 	/* border-radius: 50px; */
 }
-.upper .right {
-	display: grid;
-	place-items: top;
-	grid-template-columns: repeat(9, 1fr);
-	/* grid-template-rows: repeat(4, 1fr); */
-	grid-gap: 1rem;
-	flex: 1;
-	margin: 0rem 1rem 3rem 5rem;
-	/* border: 1px solid green; */
-}
-.upper .right .card {
-	/* width: 300px; */
-	height: fit-content;
-	/* border: 1px solid red; */
-}
-.upper .right .card img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 5px;
-}
-.upper .right .card:nth-child(2) img {
-	border-radius: 0 50% 50% 0;
-	background-color: var(--color-accent);
-	border: none;
-}
-.card:nth-child(1),
-.card:nth-child(3),
-.card:nth-child(4) {
-	grid-column: span 2;
-	/* border: 1px solid red; */
-}
-.card:nth-child(2),
-.card:nth-child(5) {
-	grid-column: span 6;
-	grid-row: span 3;
-}
-.card:nth-child(1) {
-	background-color: var(--color-);
-	border-radius: 5px;
-}
-
 /* Bottom Forward Nav */
-.pageNav {
+/* .pageNav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -166,7 +154,7 @@
 	font-size: 1rem;
 	font-weight: 400;
 	font-style: italic;
-}
+} */
 
 /* Bottom Backward Nav */
 .pageBackNav {
@@ -176,7 +164,7 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	margin: 2rem 0rem 2rem 1rem;
+	margin: 2rem 0rem 2rem 0.5rem;
 	color: var(--color-subtext);
 	cursor: pointer;
 }
@@ -185,7 +173,7 @@
 	font-size: 0.8rem;
 }
 .pageBackNav svg:last-child {
-	margin-left: -0.7rem;
+	margin-left: -0.8rem;
 }
 .pageBackNav svg:nth-child(3) {
 	font-size: 1.5rem;
@@ -194,7 +182,7 @@
 	font-weight: 100;
 }
 .pageBackNav p {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-weight: 400;
 	font-style: italic;
 }
@@ -202,35 +190,87 @@
 /* Media Queries */
 /* Larger Devices  - any size below 1050px will be affected by this query */
 @media screen and (max-width: 1050px) {
-	.upper {
-		flex-direction: column-reverse;
-		justify-content: space-between;
+	.main {
+		row-gap: 4rem;
 	}
-	.upper .left {
-		margin-bottom: 5rem;
+	.portraitOne {
+		grid-column-start: 4;
+		grid-column-end: 7;
+		position: relative;
 	}
-	.upper .right {
-		margin: 3rem 0rem 1rem 2rem;
+	.portraitOne img {
+		width: 100%;
+		height: 100%;
+		transform: scaleX(-1);
+		filter: drop-shadow(3px 3px 3px var(--color-text));
+		border-bottom-right-radius: 0%;
+	}
+	.discoveryText {
+		grid-column-start: 3;
+		grid-column-end: 7;
+	}
+	.portraitTwo {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		position: relative;
+		width: 220px;
+		height: 300px;
+	}
+	.goalText {
+		grid-column-start: 3;
+		grid-column-end: 7;
+		place-self: end;
+		text-align: left;
 	}
 }
 /* Tablet Devices  - any size below 650px will be affected by this query */
 @media screen and (max-width: 650px) {
-	.upper .left {
-		gap: 1rem;
-		padding: 2rem 4rem;
+	.main {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		padding: 0 2rem;
 	}
-	.left p {
+
+	.text {
 		font-size: 1rem;
-		line-height: 1.8rem;
-		text-align: left;
 	}
-	.upper .right {
-		margin: 3rem 0rem 1rem 4rem;
+	.content {
+		grid-column-start: 1;
+		grid-column-end: 7;
+		grid-row-start: 2;
+		display: grid;
+		place-content: center;
+		gap: 2rem;
 	}
-	.socials {
-		justify-content: center;
+	.portraitOne {
+		display: none;
+	}
+	.discoveryText {
+		grid-column-start: 1;
+		grid-column-end: 7;
+		grid-row-start: 3;
+	}
+	.portraitTwo {
+		grid-column-start: 1;
+		grid-column-end: 7;
+		grid-row-start: 1;
+		width: 100%;
+		height: 400px;
+		margin-bottom: 13rem;
 		margin-top: 2rem;
-		gap: 1rem;
+	}
+	.portraitTwo img {
+		width: 100%;
+		height: 100%;
+		border-radius: 25px;
+	}
+	.goalText {
+		grid-column-start: 1;
+		grid-column-end: 7;
+		grid-row-start: 4;
+		place-self: end;
+		text-align: left;
 	}
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
@@ -246,11 +286,8 @@
 	.aboutMe .title div {
 		width: 6rem;
 	}
-	.upper .left {
-		padding: 2rem;
-	}
-	.upper .right {
-		margin: 1rem 0rem 0rem 2rem;
+	.portraitTwo {
+		margin-bottom: 10rem;
 	}
 	.socials {
 		gap: 0.5rem;
@@ -275,16 +312,19 @@
 		width: 3rem;
 		margin-left: 1rem;
 	}
-	.upper .left {
-		padding: 2rem;
+	.portraitTwo {
+		margin-bottom: -5rem;
+		margin-top: 0rem;
 	}
-	.left p {
-		font-size: 1rem;
-		line-height: 1.5rem;
-		text-align: left;
+	.socials {
+		gap: 0.5rem;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
 	}
-	.upper .right {
-		margin: 0rem 0rem 0rem 2rem;
+	.socials p {
+		font-size: 0.8rem;
+		margin: 1rem 4rem;
 	}
 	.pageNav,
 	.pageBackNav {
