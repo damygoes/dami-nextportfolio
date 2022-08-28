@@ -32,13 +32,13 @@ const HomePage = () => {
 					</h2>
 					<div className={styles.description}>
 						<h1 className="xyz-in" xyz="fade in-left delay-1 duration-2">
-							web developer & creative thinker
+							fullstack developer & creative thinker
 						</h1>
 					</div>
 					<p className="xyz-in" xyz="fade in-left delay-2 duration-2">
-						I am passionate about using various web development tools to create fun
-						products that solve problems in various industries. Let&apos;s connect if
-						you&apos;re looking for a creative mind to join your team
+						I am focused on using various web technologies to build intuitive and
+						user-friendly applications. So let&apos;s connect if you want a creative
+						mind to join your team.
 					</p>
 					<div
 						className={styles.cta + " " + "xyz-in"}

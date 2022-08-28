@@ -29,7 +29,7 @@ const Aboutme = () => {
 				<div className={styles.content}>
 					<p className={styles.text}>
 						My name is <span>Damilola Bada</span>. I am a motivated and goal-oriented
-						front-end developer. I am passionate about building intuitive,
+						fullstack developer. I am passionate about building intuitive,
 						user-friendly and yet creative web applications. I am focused on providing
 						pixel-perfect designs and writing clean code. In addition, I have a
 						curious personality that makes me crave knowledge and self-development and

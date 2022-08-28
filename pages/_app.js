@@ -1,13 +1,18 @@
 import Layout from "../components/layout/Layout";
+import Head from "next/head";
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			{" "}
-			<Component {...pageProps} />
-		</Layout>
+		<>
+			<Head>
+				<title>Damilola Bada | Web Developer </title>
+			</Head>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</>
 	);
 }
 
