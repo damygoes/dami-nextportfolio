@@ -194,9 +194,11 @@
     row-gap: 4rem;
   }
   .portraitOne {
-    grid-column-start: 4;
+    grid-column-start: 2;
+    grid-row-start: 1;
     grid-column-end: 7;
     position: relative;
+    /* width: 90%; */
   }
   .portraitOne img {
     width: 100%;
@@ -205,18 +207,10 @@
     filter: drop-shadow(3px 3px 3px var(--color-text));
     border-bottom-right-radius: 0%;
   }
-  .discoveryText {
-    grid-column-start: 3;
+  .content {
     grid-column-end: 7;
   }
-  .portraitTwo {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    position: relative;
-    width: 220px;
-    height: 300px;
-  }
+
   .goalText {
     grid-column-start: 3;
     grid-column-end: 7;
@@ -231,46 +225,21 @@
     gap: 2rem;
     padding: 0 2rem;
   }
-
   .text {
     font-size: 1rem;
   }
-  .content {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    display: grid;
-    place-content: center;
-    gap: 2rem;
-  }
+
   .portraitOne {
-    display: none;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 7;
+    position: relative;
+    width: 100%;
   }
   .discoveryText {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 3;
-  }
-  .portraitTwo {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 13rem;
-    margin-top: 2rem;
-  }
-  .portraitTwo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-  }
-  .goalText {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    place-self: end;
-    text-align: left;
   }
 }
 /* Mobile Devices  - any size below 490px will be affected by this query */
@@ -286,11 +255,8 @@
   .aboutMe .title div {
     width: 6rem;
   }
-  .portraitTwo {
-    margin-bottom: 10rem;
-  }
   .socials {
-    gap: 0.5rem;
+    gap: 0rem;
     justify-content: space-evenly;
     align-items: center;
   }
@@ -311,10 +277,6 @@
   .aboutMe .title div {
     width: 3rem;
     margin-left: 1rem;
-  }
-  .portraitTwo {
-    margin-bottom: -5rem;
-    margin-top: 0rem;
   }
   .socials {
     gap: 0.5rem;
